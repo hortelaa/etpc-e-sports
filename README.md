@@ -16,5 +16,10 @@ Site feito para auxiliar o andamento da segunda edição do campeonato da ETPC.
 
 - Tailwind <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeKPw4CK4jcH7udsFHZdiB3iIOuI3fUCsxUZosXy4Y1yd25NA-dzCBPrSDIhg1BwObl3w&usqp=CAU" width="18">
 
+# Wireframes
 
-https://www.figma.com/file/tbmkQ6NSJqjQwLGD93kjVh/TELAS?node-id=2%3A16
+- Página Inicial <img src="https://media.discordapp.net/attachments/663603698903154701/885988844409851914/unknown.png" width="100">
+
+- Cadastro <img src="https://cdn.discordapp.com/attachments/663603698903154701/885989173528506448/unknown.png" width="100">
+
+- Cadastro - Termos e Condições <img src="https://cdn.discordapp.com/attachments/663603698903154701/885989342399582228/unknown.png" width="100">
