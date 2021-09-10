@@ -1,6 +1,18 @@
 # ETPC-E-SPORTS
 Site feito para auxiliar o andamento da segunda edição do campeonato da ETPC.
 
+# Como instalar
+1. Abrir o diretório do site no Visual Studio Code.
+2. Acessar o terminal do Visual Studio Code.
+3. Digitar a seguinte linha: 
+```
+npm install -D tailwindcss@latest postcss@latest autoprefixer@latest
+```
+4. Digitar a seguinte linha:
+```
+npm run build
+```
+
 # Ferramentas
 - JavaScript  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/480px-Unofficial_JavaScript_logo_2.svg.png" width="20">
 
