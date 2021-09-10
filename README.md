@@ -15,3 +15,6 @@ Site feito para auxiliar o andamento da segunda edição do campeonato da ETPC.
 - MySQL <img src="https://dashboard.absam.io/img/icon_mysql.svg" width="18">
 
 - Tailwind <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeKPw4CK4jcH7udsFHZdiB3iIOuI3fUCsxUZosXy4Y1yd25NA-dzCBPrSDIhg1BwObl3w&usqp=CAU" width="18">
+
+
+https://www.figma.com/file/tbmkQ6NSJqjQwLGD93kjVh/TELAS?node-id=2%3A16
