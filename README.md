@@ -18,8 +18,11 @@ Site feito para auxiliar o andamento da segunda edição do campeonato da ETPC.
 
 # Wireframes
 
-- Página Inicial <img src="https://media.discordapp.net/attachments/663603698903154701/885988844409851914/unknown.png" width="100">
+- Página Inicial
+- <img src="https://media.discordapp.net/attachments/663603698903154701/885988844409851914/unknown.png" width="100%">
 
-- Cadastro <img src="https://cdn.discordapp.com/attachments/663603698903154701/885989173528506448/unknown.png" width="100">
+- Cadastro
+- <img src="https://cdn.discordapp.com/attachments/663603698903154701/885989173528506448/unknown.png" width="100%">
 
-- Cadastro - Termos e Condições <img src="https://cdn.discordapp.com/attachments/663603698903154701/885989342399582228/unknown.png" width="100">
+- Cadastro - Termos e Condições
+- <img src="https://cdn.discordapp.com/attachments/663603698903154701/885989342399582228/unknown.png" width="100%">
