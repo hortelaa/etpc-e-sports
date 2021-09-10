@@ -1,0 +1,23 @@
+{
+  "name": "tailwind-css-starter-postcss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "postcss ./src/styles.css -o ./public/dist/styles.css",
+    "watch": "onchange 'tailwind.config.js' './public/**/*.html' './src/**/*.css' -- npm run build",
+    "prod": "NODE_ENV=production postcss ./src/styles.css -o ./public/dist/styles.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "postcss-cli": "^8.3.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.3.4",
+    "onchange": "^7.1.0",
+    "postcss": "^8.3.6",
+    "tailwindcss": "^2.2.14"
+  }
+}
