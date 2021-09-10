@@ -46,6 +46,6 @@ npm run build
 - <img src="https://cdn.discordapp.com/attachments/663603698903154701/885990194824740864/unknown.png" width="50%">
 
   Sobre
-- <img src="https://cdn.discordapp.com/attachments/663603698903154701/885990194824740864/unknown.png" width="50%">
+- <img src="https://cdn.discordapp.com/attachments/663603698903154701/885994448314589194/unknown.png" width="50%">
 
   
