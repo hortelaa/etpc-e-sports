@@ -26,3 +26,14 @@ Site feito para auxiliar o andamento da segunda edição do campeonato da ETPC.
 
 - Cadastro - Termos e Condições
 - <img src="https://cdn.discordapp.com/attachments/663603698903154701/885989342399582228/unknown.png" width="50%">
+
+  Tela Equipes
+- <img src="https://cdn.discordapp.com/attachments/663603698903154701/885990006508879872/unknown.png" width="50%">
+
+  Perfil Jogadores
+- <img src="https://cdn.discordapp.com/attachments/663603698903154701/885990194824740864/unknown.png" width="50%">
+
+  Sobre
+- <img src="https://cdn.discordapp.com/attachments/663603698903154701/885990194824740864/unknown.png" width="50%">
+
+  
