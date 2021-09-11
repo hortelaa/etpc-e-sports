@@ -7,17 +7,21 @@
     <title>ETPC-ESPORTS</title>
     <link rel="stylesheet" href="dist/styles.css" />
 </head>
-
+<style>
+ 
+</style>
 <body>
-    <section class="h-auto overflow-hidden">
+    <section>
         <!--Fundo transparente preto-->
-        <div class="fixed z-20 w-screen h-screen bg-black bg-opacity-80"></div>
+        <div class="fixed z-10 min-w-full min-h-full bg-black opacity-80"></div>
+        <div class="fixed">
         <!--Vídeo de fundo-->
-        <video id="videoBG" poster="/src/imgs/poster.png" autoplay muted loop class="absolute z-10 w-auto min-w-full min-h-full max-w-none">
+        <video id="videoBG" poster="/src/imgs/poster.png" autoplay muted loop class="absolute z-10 min-w-full min-h-full max-w-none">
                 <source src="/src/video/background.mp4" type="video/mp4">
             </video>
+        </div>
         <!--Mobile-->
-        <section class="relative z-20 ">
+        <section class="relative z-20">
             <div class="flex items-center justify-center pt-20 lg:hidden">
                 <div class="absolute shadow-md w-52 h-52 bg-gradient-to-r from-indigo-500 to-indigo-800 rounded-3xl lg:w-80 lg:h-80"></div>
                 <div class="transform shadow-md w-52 h-52 bg-gradient-to-r from-indigo-300 to-indigo-500 rounded-3xl lg:w-80 lg:h-80 rotate-12"><img src="https://cdn.streamelements.com/uploads/56cfc7de-a46e-409d-aa28-f759c8275bc8.gif" alt="" class="absolute pt-4 transform lg:text-center w-52 lg:scale-150 lg:w-72 "></div>
@@ -31,8 +35,8 @@
                 <p class="w-3/4 pt-4 font-mono text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, doloribus ducimus incidunt beatae officiis quam nobis corrupti modi esse a amet, quidem quos odio rem perferendis, asperiores nemo ab soluta.</p>
             </div>
             <div class="flex items-center justify-center pt-8 lg:hidden">
-                <button class="h-8 font-mono font-bold text-white bg-indigo-500 rounded shadow-md w-44 animbtnsite">Acessar Site</button>´
-                <button class="h-8 ml-6 font-mono font-bold text-white bg-indigo-800 rounded shadow-md w-44 animbtncadastro lg:m-12">Cadastrar</button>
+                <button class="h-8 mb-8 font-mono font-bold text-white bg-indigo-500 rounded shadow-md w-44 animbtnsite">Acessar Site</button>´
+                <button class="h-8 mb-8 ml-6 font-mono font-bold text-white bg-indigo-800 rounded shadow-md w-44 animbtncadastro lg:m-12">Cadastrar</button>
             </div>
         </section>
         <!--Fim Mobile-->
@@ -60,5 +64,4 @@
         </div>
     </section>
 </body>
-
 </html>

@@ -12,12 +12,9 @@
 /*/Estilização do "Botão acessar site" /*/
 
 .animbtnsite {
-    @apply transition duration-500 ease-out transform hover: scale-125 hover: bg-indigo-600;
+    @apply transition duration-500 ease-out transform scale-125 bg-indigo-600 hover:;
 }
-
-
 /*/Estilização do "Botão Cadastro" /*/
-
 .animbtncadastro {
-    @apply transition duration-500 ease-out transform hover: scale-125 hover: bg-indigo-900;
+    @apply transition duration-500 ease-out transform scale-125 bg-indigo-900 hover:;
 }
