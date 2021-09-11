@@ -31881,7 +31881,7 @@ video {
 
 /*/Estilização do "ETPC" /*/
 
-.etpc{
+.etpc {
   font-size: 2.25rem;
   line-height: 2.5rem;
   font-weight: 700;
@@ -31891,7 +31891,7 @@ video {
 
 /*/Estilização do "Botão acessar site" /*/
 
-.animbtnsite{
+.animbtnsite {
   --tw-translate-x: 0;
   --tw-translate-y: 0;
   --tw-rotate: 0;
@@ -31905,11 +31905,11 @@ video {
 .animbtnsite:hover {
   --tw-scale-x: 1.25;
   --tw-scale-y: 1.25;
-  --tw-bg-opacity: 1;
-  background-color: rgba(79, 70, 229, var(--tw-bg-opacity));
 }
 
 .animbtnsite {
+  --tw-bg-opacity: 1;
+  background-color: rgba(79, 70, 229, var(--tw-bg-opacity));
   transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
   transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
@@ -31921,7 +31921,7 @@ video {
 
 /*/Estilização do "Botão Cadastro" /*/
 
-.animbtncadastro{
+.animbtncadastro {
   --tw-translate-x: 0;
   --tw-translate-y: 0;
   --tw-rotate: 0;
@@ -31935,11 +31935,39 @@ video {
 .animbtncadastro:hover {
   --tw-scale-x: 1.25;
   --tw-scale-y: 1.25;
-  --tw-bg-opacity: 1;
-  background-color: rgba(49, 46, 129, var(--tw-bg-opacity));
 }
 
 .animbtncadastro {
+  --tw-bg-opacity: 1;
+  background-color: rgba(49, 46, 129, var(--tw-bg-opacity));
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+.animbtncontinuar{
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.animbtncontinuar:hover {
+  --tw-scale-x: 1.1;
+  --tw-scale-y: 1.1;
+}
+
+.animbtncontinuar {
+  --tw-bg-opacity: 1;
+  background-color: rgba(91, 33, 182, var(--tw-bg-opacity));
   transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
   transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
@@ -188083,4 +188111,3 @@ video {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
-

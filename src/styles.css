@@ -8,13 +8,17 @@
     @apply text-4xl font-bold text-indigo-600;
 }
 
-
 /*/Estilização do "Botão acessar site" /*/
 
 .animbtnsite {
-    @apply transition duration-500 ease-out transform scale-125 bg-indigo-600 hover:;
+    @apply transition duration-500 ease-out transform bg-indigo-600 hover:scale-125;
 }
 /*/Estilização do "Botão Cadastro" /*/
+
 .animbtncadastro {
-    @apply transition duration-500 ease-out transform scale-125 bg-indigo-900 hover:;
+    @apply transition duration-500 ease-out transform bg-indigo-900 hover:scale-125;
+}
+
+.animbtncontinuar{
+    @apply transition duration-500 ease-out transform bg-purple-800 hover:scale-110 ;
 }
