@@ -1,4 +1,4 @@
-/*! tailwindcss v2.2.14 | MIT License | https://tailwindcss.com */
+/*! tailwindcss v2.2.15 | MIT License | https://tailwindcss.com */
 
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 
@@ -31879,6 +31879,8 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/*/Estilização do "ETPC" /*/
+
 .etpc{
   font-size: 2.25rem;
   line-height: 2.5rem;
@@ -31886,6 +31888,8 @@ video {
   --tw-text-opacity: 1;
   color: rgba(79, 70, 229, var(--tw-text-opacity));
 }
+
+/*/Estilização do "Botão acessar site" /*/
 
 .animbtnsite{
   --tw-translate-x: 0;
@@ -31915,6 +31919,8 @@ video {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
+/*/Estilização do "Botão Cadastro" /*/
+
 .animbtncadastro{
   --tw-translate-x: 0;
   --tw-translate-y: 0;
@@ -31941,11 +31947,6 @@ video {
   transition-duration: 150ms;
   transition-duration: 500ms;
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-}
-
-#videoBG{
-  position: fixed;
-  z-index: -1;
 }
 
 @media (min-width: 640px) {
@@ -188082,3 +188083,4 @@ video {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
+
