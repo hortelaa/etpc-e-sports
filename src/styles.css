@@ -15,8 +15,3 @@
     @apply transition duration-500 ease-out transform hover:scale-125 hover:bg-indigo-900;
 }
 
-* {
-    background: #000 !important;
-    color: #0f0 !important;
-    outline: solid #f00 1px !important;
-  }
