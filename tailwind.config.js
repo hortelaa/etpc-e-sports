@@ -4,7 +4,11 @@ module.exports = {
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'fundo': "url('/src/imgs/fundocadastro.png')",
+       }
+    },
   },
   variants: {
     extend: {},
