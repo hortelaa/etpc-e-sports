@@ -13,15 +13,18 @@
 
 <!-- GRADIENTE ANIMADO-->
 <style>
-
     /** Se colocar MAIN no lugar do BODY ele vai ficar dentro da caixa branca **/
-    body{
-        background-image: url('jhin-camile.gif');   
-        background-color: black;
+    body {
+        background-image: url('jhin-camile.gif');
+        background-size: 100%;
+        background-repeat: repeat-y;
+        background-attachment: fixed;
+        height: 100%;
+        width: 100%;
 
     }
 
- 
+
 
     section .wave {
         position: absolute;
@@ -86,7 +89,10 @@
         }
     }
 </style>
-<body class=" min-h-screen body-bg md:pt-20 md:px-0 style=" font-family: 'Lato' ,sans-serif; ">
+
+<body>
+
+    <div class=" bg-black bg-opacity-60 min-h-screen body-bg md:pt-20 md:px-0 style=" font-family: 'Lato' ,sans-serif; ">
     <!-- HEADER-->
     <header>
         <h1 class="p-3 text-4xl font-bold text-center text-white ">Bem-vindo ao ETPC E-SPORTS</h1>
@@ -97,89 +103,94 @@
     <!-- WHITE BOX -->
     <div class="flex items-center justify-center ">
         <main class="max-w-3xl p-8 mx-auto my-10 bg-white rounded-lg shadow-2xl md:p-12">
-    <!-- TEXTO -->
-    <section>
-        <h3 class="text-2xl font-bold text-center ">Cadastre sua equipe</h3>
-        <p class="pt-2 font-thin text-center text-gray-600 ">Digite as informações do aluno ETPC</p>
-    </section>
+            <!-- TEXTO -->
+            <section>
+                <h3 class="text-2xl font-bold text-center ">Cadastre sua equipe</h3>
+                <p class="pt-2 font-thin text-center text-gray-600 ">Digite as informações do aluno ETPC</p>
+            </section>
 
-    <!-- FORMULARIO -->
-    <section class="mt-10 ">
-        <form class="z-30 grid lg:gap-4 md:grid-cols-2 md:gap-4 lg:grid-cols-2 sm:flex-col" method="
+            <!-- FORMULARIO -->
+            <section class="mt-10 ">
+                <form class="z-30 grid lg:gap-4 md:grid-cols-2 md:gap-4 lg:grid-cols-2 sm:flex-col" method="
     POST " action=" # ">
 
 
-            <!-- EMAIL -->
-            <div class="pt-3 mb-6 bg-gray-200 rounded ">
-                <label class="block mb-2 ml-3 text-sm font-bold text-gray-700 " for=" email ">📧 Email</label>
-                <input type=" email " name=" email " id=" input" placeholder="Ex: etpc@gmail.com.br "
-                    class="w-full px-3 pb-3 text-gray-700 transition duration-500 bg-gray-200 border-b-4 border-gray-300 rounded focus:outline-none focus:border-purple-600 ">
-            </div>
+                    <!-- EMAIL -->
+                    <div class="pt-3 mb-6 bg-gray-200 rounded ">
+                        <label class="block mb-2 ml-3 text-sm font-bold text-gray-700 " for=" email ">📧 Email</label>
+                        <input type=" email " name=" email " id=" input" placeholder="Ex: etpc@gmail.com.br "
+                            class="w-full px-3 pb-3 text-gray-700 transition duration-500 bg-gray-200 border-b-4 border-gray-300 rounded focus:outline-none focus:border-purple-600 ">
+                    </div>
 
-            <!-- NOME DA EQUIPE-->
-            <div class="pt-3 mb-6 bg-gray-200 rounded ">
-                <label class="block mb-2 ml-3 text-sm font-bold text-gray-700 " for="text ">🚀 Nome da Equipe</label>
-                <input type="text " name="equipe " id="input" placeholder="Ex: Bianca Lovers "
-                    class="w-full px-3 pb-3 text-gray-700 transition duration-500 bg-gray-200 border-b-4 border-gray-300 rounded focus:outline-none focus:border-purple-600 ">
-            </div>
+                    <!-- NOME DA EQUIPE-->
+                    <div class="pt-3 mb-6 bg-gray-200 rounded ">
+                        <label class="block mb-2 ml-3 text-sm font-bold text-gray-700 " for="text ">🚀 Nome da
+                            Equipe</label>
+                        <input type="text " name="equipe " id="input" placeholder="Ex: Bianca Lovers "
+                            class="w-full px-3 pb-3 text-gray-700 transition duration-500 bg-gray-200 border-b-4 border-gray-300 rounded focus:outline-none focus:border-purple-600 ">
+                    </div>
 
-            <!-- NOME COMPLETO -->
-            <div class="pt-3 mb-6 bg-gray-200 rounded ">
-                <label class="block mb-2 ml-3 text-sm font-bold text-gray-700 " for="text ">📚 Nome Completo dos
-                    integrantes</label>
-                <input type="text " name="nome " id="input"
-                    placeholder="Ex: João Silva Nunes; José Antônio Oliveira; Caio... "
-                    class="w-full px-3 pb-3 text-gray-700 transition duration-500 bg-gray-200 border-b-4 border-gray-300 rounded focus:outline-none focus:border-purple-600 ">
-            </div>
+                    <!-- NOME COMPLETO -->
+                    <div class="pt-3 mb-6 bg-gray-200 rounded ">
+                        <label class="block mb-2 ml-3 text-sm font-bold text-gray-700 " for="text ">📚 Nome Completo dos
+                            integrantes</label>
+                        <input type="text " name="nome " id="input"
+                            placeholder="Ex: João Silva Nunes; José Antônio Oliveira; Caio... "
+                            class="w-full px-3 pb-3 text-gray-700 transition duration-500 bg-gray-200 border-b-4 border-gray-300 rounded focus:outline-none focus:border-purple-600 ">
+                    </div>
 
-            <!-- MATRICULA -->
-            <div class="pt-3 mb-6 bg-gray-200 rounded ">
-                <label class="block mb-2 ml-3 text-sm font-bold text-gray-700 " for="text ">🎓 Matricula do(s)
-                    aluno(a)(s)
-                    ETPC</label>
-                <input type="text " name="matricula " id="input" placeholder="Ex: 218102; 240687; 17... "
-                    class="w-full px-3 pb-3 text-gray-700 transition duration-500 bg-gray-200 border-b-4 border-gray-300 rounded focus:outline-none focus:border-purple-600 ">
-            </div>
+                    <!-- MATRICULA -->
+                    <div class="pt-3 mb-6 bg-gray-200 rounded ">
+                        <label class="block mb-2 ml-3 text-sm font-bold text-gray-700 " for="text ">🎓 Matricula do(s)
+                            aluno(a)(s)
+                            ETPC</label>
+                        <input type="text " name="matricula " id="input" placeholder="Ex: 218102; 240687; 17... "
+                            class="w-full px-3 pb-3 text-gray-700 transition duration-500 bg-gray-200 border-b-4 border-gray-300 rounded focus:outline-none focus:border-purple-600 ">
+                    </div>
 
-            <!-- TURMA E CURSO -->
-            <div class="pt-3 mb-6 bg-gray-200 rounded ">
-                <label class="block mb-2 ml-3 text-sm font-bold text-gray-700 " for="text ">🏢 Turma e Curso do(s)
-                    aluno(a)(s)
-                    ETPC</label>
-                <input type="text " name="turma-e-curso " id="input"
-                    placeholder="Ex: 3ºB Mecatrônica; 2ºA Informática; 2º Admi.. "
-                    class="w-full px-3 pb-3 text-gray-700 transition duration-500 bg-gray-200 border-b-4 border-gray-300 rounded focus:outline-none focus:border-purple-600 ">
-            </div>
+                    <!-- TURMA E CURSO -->
+                    <div class="pt-3 mb-6 bg-gray-200 rounded ">
+                        <label class="block mb-2 ml-3 text-sm font-bold text-gray-700 " for="text ">🏢 Turma e Curso
+                            do(s)
+                            aluno(a)(s)
+                            ETPC</label>
+                        <input type="text " name="turma-e-curso " id="input"
+                            placeholder="Ex: 3ºB Mecatrônica; 2ºA Informática; 2º Admi.. "
+                            class="w-full px-3 pb-3 text-gray-700 transition duration-500 bg-gray-200 border-b-4 border-gray-300 rounded focus:outline-none focus:border-purple-600 ">
+                    </div>
 
-            <!-- NICK DOS INTEGRANTES -->
-            <div class="pt-3 mb-6 bg-gray-200 rounded ">
-                <label class="block mb-2 ml-3 text-sm font-bold text-gray-700 " for="text ">📘 Nick's dos
-                    Jogadores</label>
-                <input type="text " name="nick-dos-integrantes-da-equipe " id="input"
-                    placeholder="Ex: AlucardYT; TeemoDoidao; RatoBrasil... "
-                    class="w-full px-3 pb-3 text-gray-700 transition duration-500 bg-gray-200 border-b-4 border-gray-300 rounded focus:outline-none focus:border-purple-600 ">
-            </div>
+                    <!-- NICK DOS INTEGRANTES -->
+                    <div class="pt-3 mb-6 bg-gray-200 rounded ">
+                        <label class="block mb-2 ml-3 text-sm font-bold text-gray-700 " for="text ">📘 Nick's dos
+                            Jogadores</label>
+                        <input type="text " name="nick-dos-integrantes-da-equipe " id="input"
+                            placeholder="Ex: AlucardYT; TeemoDoidao; RatoBrasil... "
+                            class="w-full px-3 pb-3 text-gray-700 transition duration-500 bg-gray-200 border-b-4 border-gray-300 rounded focus:outline-none focus:border-purple-600 ">
+                    </div>
 
-            <!-- BOTÃO (pra ficar 3D é só adicionar = border-b-4)-->
-            <button
-                class="px-4 py-5 text-xl font-bold text-white transition duration-200 bg-purple-600 bg-opacity-50 border-b-4 border-purple-300 rounded shadow-lg cursor-not-allowed md:col-span-2 "
-                type="submit " id="continuar" disabled>Continuar</button>
-        </form>
-    </section>
-    </section>
-    </main>
+                    <!-- BOTÃO (pra ficar 3D é só adicionar = border-b-4)-->
+                    <button
+                        class="px-4 py-5 text-xl font-bold text-white transition duration-200 bg-purple-600 bg-opacity-50 border-b-4 border-purple-300 rounded shadow-lg cursor-not-allowed md:col-span-2 "
+                        type="submit " id="continuar" disabled>Continuar</button>
+                </form>
+            </section>
+            </section>
+        </main>
     </div>
     <div class="relative -mt-20 ">
-        <section id="wave" class="" >
+        <section id="wave" class="">
             <div class="absolute inset-0 sm:inset-8 md:inset-20 lg:inset-20 wave wave1"></div>
             <div class="absolute inset-0 sm:inset-8 md:inset-20 lg:inset-20 wave wave2"></div>
             <div class="absolute inset-0 sm:inset-8 md:inset-20 lg:inset-20 wave wave3"></div>
             <div class="absolute inset-0 sm:inset-8 md:inset-20 lg:inset-20 wave wave4"></div>
-        </section> 
+        </section>
     </div>
-    <script src="jquery.min.js"></script>
+    </div>
+</body>
 
-    <script type="text/javascript ">
+<script src="jquery.min.js"></script>
+
+<script type="text/javascript ">
         //Variavel do botao para mudar o seu css
         var botao = $('#continuar');
 
