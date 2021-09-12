@@ -13,6 +13,16 @@
 
 <!-- GRADIENTE ANIMADO-->
 <style>
+
+    /** Se colocar MAIN no lugar do BODY ele vai ficar dentro da caixa branca **/
+    body{
+        background-image: url('jhin-camile.gif');   
+        background-color: black;
+
+    }
+
+ 
+
     section .wave {
         position: absolute;
         bottom: 0;
@@ -76,10 +86,7 @@
         }
     }
 </style>
-
-
-
-<body class="min-h-screen body-bg md:pt-20 md:px-0  style=" font-family: 'Lato' ,sans-serif; ">
+<body class=" min-h-screen body-bg md:pt-20 md:px-0 style=" font-family: 'Lato' ,sans-serif; ">
     <!-- HEADER-->
     <header>
         <h1 class="p-3 text-4xl font-bold text-center text-white ">Bem-vindo ao ETPC E-SPORTS</h1>
@@ -170,7 +177,6 @@
             <div class="absolute inset-0 sm:inset-8 md:inset-20 lg:inset-20 wave wave4"></div>
         </section> 
     </div>
-    
     <script src="jquery.min.js"></script>
 
     <script type="text/javascript ">
@@ -201,7 +207,7 @@
                 botao.addClass('cursor-not-allowed');
                 botao.addClass('bg-opacity-50');
                 botao.removeClass('border-purple-800');
-                botao.removeClass('transition duration-500 ease-out transform hover:scale-110 hover:bg-purple-800');
+                botao.removeClass('transition duration-500 ease-out transform hover:scale-105 hover:bg-purple-800');
                 // transition duration-500 ease-out transform hover: scale-125 hover: bg-indigo-900;
 
                 //Caso o formulario estiver preenchido
@@ -211,7 +217,7 @@
                 botao.removeClass('cursor-not-allowed');
                 botao.removeClass('bg-opacity-50');
                 botao.addClass('border-purple-800');
-                botao.addClass('transition duration-500 ease-out transform hover:scale-110 hover:bg-purple-800');
+                botao.addClass('transition duration-500 ease-out transform hover:scale-105 hover:bg-purple-800');
             }
         });
     </script>

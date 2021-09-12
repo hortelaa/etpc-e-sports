@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "particlesjs": "^2.2.3",
     "postcss-cli": "^8.3.1"
   },
   "devDependencies": {
