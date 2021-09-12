@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width initial-scale=1.0" />
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="dist/styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<style>
+    /** Se colocar MAIN no lugar do BODY ele vai ficar dentro da caixa branca **/
+    body {
+        background-image: url('../src/imgs/jhin-camile.gif');
+        background-size: 100%;
+        background-repeat: repeat-y;
+        background-attachment: fixed;
+        height: 100%;
+        width: 100%;
+    }
+
+    section .wave {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background: url('../src/imgs/wave.png');
+        background-size: 1000px 100px;
+
+    }
+
+    section .wave.wave1 {
+        animation: animate 30s linear infinite;
+        z-index: 10px;
+        opacity: 1;
+        animation-delay: 0s;
+        bottom: 0;
+    }
+
+    section .wave.wave2 {
+        animation: animate2 15s linear infinite;
+        z-index: 9px;
+        opacity: 0.5;
+        animation-delay: -5s;
+        bottom: 10px;
+    }
+
+    section .wave.wave3 {
+        animation: animate 30s linear infinite;
+        z-index: 8px;
+        opacity: 0.2;
+        animation-delay: -5s;
+        bottom: 10px;
+    }
+
+    section .wave.wave4 {
+        animation: animate2 15s linear infinite;
+        z-index: 7px;
+        opacity: 0.7;
+        animation-delay: -5s;
+        bottom: 20px;
+    }
+
+    @keyframes animate {
+        0% {
+            background-position-x: 0;
+        }
+
+        100% {
+            background-position-x: 1000px;
+        }
+    }
+
+    @keyframes animate2 {
+        0% {
+            background-position-x: 0;
+        }
+
+        100% {
+            background-position-x: -1000px;
+        }
+    }
+
+    .neonText {
+        color: #fff;
+        text-shadow:
+            0 0 7px #fff,
+            0 0 10px #fff,
+            0 0 21px #fff,
+            0 0 42px rgb(55, 0, 255),
+            0 0 82px rgb(55, 0, 255),
+            0 0 92px rgb(55, 0, 255),
+            0 0 102px rgb(55, 0, 255),
+            0 0 151px rgb(55, 0, 255);
+    }
+
+    h1 {
+        animation: flicker 1.5s infinite alternate;
+    }
+
+    @keyframes flicker {
+
+        0%,
+        18%,
+        22%,
+        25%,
+        53%,
+        57%,
+        100% {
+
+            text-shadow:
+                0 0 4px #fff,
+                0 0 11px #fff,
+                0 0 19px #fff,
+                0 0 40px rgb(68, 0, 255),
+                0 0 80px rgb(68, 0, 255),
+                0 0 90px rgb(68, 0, 255),
+                0 0 100px rgb(68, 0, 255),
+                0 0 150px rgb(68, 0, 255);
+
+        }
+
+        20%,
+        24%,
+        55% {
+            text-shadow: none;
+        }
+    }
+
+    /*
+    <---BARRA DE SCROLL--->
+    */
+    #progressbar {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 10px;
+        height: 100%;
+        background: linear-gradient(to top, #008aff, #00ffe7);
+        animation: animate3 5s linear infinite;
+    }
+
+    @keyframes animate3 {
+
+        0% {
+            filter: hue-rotate(0deg);
+        }
+
+        50% {
+            filter: hue-rotate(360deg);
+
+        }
+    }
+
+    #progressbar:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to top, #008aff, #00ffe7);
+        filter: blur(10px);
+    }
+
+    #progressbar:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to top, #008aff, #00ffe7);
+        filter: blur(30px);
+    }
+
+    #overflow {
+        animation: animate3 5s linear infinite;
+        overflow-y: scroll;
+    }
+
+    ::-webkit-scrollbar {
+        width: 0px;
+        filter: blur(30px);
+        animation: animate3 5s linear infinite;
+
+    }
+
+    /*
+    <---FIM DA BARRA DE SCROLL--->
+    */
+
+    @media only screen and (hover: none) and (pointer: coarse) {
+
+        /** BARRA BACKUP**/
+        #overflow::-webkit-scrollbar {
+            width: 10px;
+            filter: blur(30px);
+            animation: animate3 5s linear infinite;
+
+        }
+
+        #overflow::-webkit-scrollbar * {
+            background: transparent;
+            animation: animate3 5s linear infinite;
+            background: linear-gradient(to top, #008aff, #00ffe7);
+
+
+
+        }
+
+        #overflow::-webkit-scrollbar-thumb {
+            background: linear-gradient(to top, #008aff, #00ffe7);
+            animation: animate3 5s linear infinite;
+            filter: blur(30px);
+
+
+        }
+
+        #overflow::-webkit-scrollbar-thumb::after {
+            background: linear-gradient(to top, #008aff, #00ffe7);
+            animation: animate3 5s linear infinite;
+            filter: blur(30px);
+
+
+        }
+
+        #overflow::-webkit-scrollbar-thumb::before {
+            background: linear-gradient(to top, #008aff, #00ffe7);
+            animation: animate3 5s linear infinite;
+            filter: blur(10px);
+
+
+        }
+
+        #overflow::-webkit-scrollbar::after {
+            background: linear-gradient(to top, #008aff, #00ffe7);
+            filter: blur(30px);
+            animation: animate3 5s linear infinite;
+
+
+
+        }
+
+        #overflow::-webkit-scrollbar::before {
+            background: linear-gradient(to top, #008aff, #00ffe7);
+            animation: animate3 5s linear infinite;
+            filter: blur(10px);
+
+
+        }
+
+        /* FIM DA BARRA BACKUP */
+        /* Regular CSS rules here*/
+
+    }
+</style>
+
+<body>
+    <div class="fixed z-0 min-w-full min-h-full bg-black opacity-60"></div>
+    <div class="min-h-screen body-bg md:pt-20 md:px-0 style=" font-family: 'Lato' ,sans-serif; ">
+
+            <!-- HEADER-->
+            <header class="relative ">
+                <h1 class="p-3 text-4xl font-bold text-center text-white ">Estamos quase lá</h1>
+            </header>
+
+            <!-- WHITE BOX -->
+            <div class="relative flex items-center justify-center ">
+                <main class="max-w-3xl p-8 mx-auto my-10 bg-white rounded-lg shadow-2xl ">
+            <!-- TEXTO -->
+                    <section>
+                        <h3 class="text-2xl font-bold text-center ">Leia o regulamento</h3>
+                        <p class="pt-2 mb-10 font-thin text-center text-gray-600 ">Ao aceitar você concorda com os termos e
+                    condições
+                    abaixo</p>
+                    </section>
+
+                    <!-- REGULAMENTO -->
+                    <section class="text-center  h-60" id="overflow">
+
+        <!-- Barra de rolagem -->
+        <div class="barra-de-rolagem"></div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, repellendus totam consequatur
+            veritatis numquam nihil recusandae! Quod quis perferendis reiciendis suscipit autem nulla impedit
+            eligendi, iusto numquam assumenda similique voluptate?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, repellendus totam consequatur
+            veritatis numquam nihil recusandae! Quod quis perferendis reiciendis suscipit autem nulla impedit
+            eligendi, iusto numquam assumenda similique voluptate?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, repellendus totam consequatur
+            veritatis numquam nihil recusandae! Quod quis perferendis reiciendis suscipit autem nulla impedit
+            eligendi, iusto numquam assumenda similique voluptate?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, repellendus totam consequatur
+            veritatis numquam nihil recusandae! Quod quis perferendis reiciendis suscipit autem nulla impedit
+            eligendi, iusto numquam assumenda similique voluptate?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, repellendus totam consequatur
+            veritatis numquam nihil recusandae! Quod quis perferendis reiciendis suscipit autem nulla impedit
+            eligendi, iusto numquam assumenda similique voluptate?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, repellendus totam consequatur
+            veritatis numquam nihil recusandae! Quod quis perferendis reiciendis suscipit autem nulla impedit
+            eligendi, iusto numquam assumenda similique voluptate?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, repellendus totam consequatur
+            veritatis numquam nihil recusandae! Quod quis perferendis reiciendis suscipit autem nulla impedit
+            eligendi, iusto numquam assumenda similique voluptate?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, repellendus totam consequatur
+            veritatis numquam nihil recusandae! Quod quis perferendis reiciendis suscipit autem nulla impedit
+            eligendi, iusto numquam assumenda similique voluptate?</p>
+        </section>
+
+        <!-- FORMULARIO -->
+        <section class="mt-10 ">
+            <form class="z-30 grid lg:gap-4 md:grid-cols-2 md:gap-4 lg:grid-cols-2 sm:flex-col" method="
+            POST " action="bolao.php">
+
+                <!-- BOTÃO (pra ficar 3D é só adicionar = border-b-4)-->
+                <button
+                    class="px-4 py-5 text-xl font-bold text-white transition duration-200 bg-purple-600 bg-opacity-50 border-b-4 border-purple-300 rounded shadow-lg cursor-not-allowed md:col-span-2 "
+                    type="submit " id="continuar" disabled>Aceitar</button>
+            </form>
+        </section>
+        </main>
+    </div>
+
+    <!-- ONDAS -->
+    <div class="relative -mt-20 ">
+        <section id="wave" class="">
+
+            <!-- Olá marcio valim, eu sabia que você viria aqui -->
+
+            <div class="absolute inset-0 md:inset-20 lg:inset-44 wave wave1"></div>
+            <div class="absolute inset-0 md:inset-20 lg:inset-44 wave wave2"></div>
+            <div class="absolute inset-0 md:inset-20 lg:inset-44 wave wave3"></div>
+            <div class="absolute inset-0 md:inset-20 lg:inset-44 wave wave4"></div>
+        </section>
+    </div>
+    </div>
+</body>
+
+
+<script type="text/javascript ">
+
+
+    var botao = $('#continuar');
+
+    //Variavel booleana para detectar se ele tá em desktop ou não
+    var desktop = false;
+
+    //Detectar o dispositivo do usuário
+    const deviceType = () => {
+        const ua = navigator.userAgent;
+        if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+            console.log("tablet");
+        }
+        else if (/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua))
+        {
+            console.log("mobile");
+        }
+        else
+        {
+        desktop = true;
+        }
+    }
+    
+    let scroll = document.getElementById('overflow');
+
+    //Executando a função
+    deviceType();
+
+    //Se ele estiver no PC
+    if (desktop){
+
+        //Adicionando o ID com os efeitos no CSS na barra
+        var barraDeRolagem = document.querySelector('.barra-de-rolagem');
+        barraDeRolagem.setAttribute ('id', 'progressbar')
+
+        let progress = document.getElementById('progressbar');
+
+        //Resetando a barra de rolagem
+        let progressHeight = 0;
+        progress.style.height = progressHeight + "%";
+        
+        //Altura do desktop
+        alturaTotal = 336;
+
+        //Enquanto estiver scrollando
+        scroll.onscroll = function(){
+            let alturaTotal = 336;
+            let multiplicador = document.getElementById('overflow').clientHeight;
+            let tamanho = document.getElementById('overflow').scrollTop;
+
+            //CALCULO DA BARRA DE ROLAGEM
+            progressHeight = (tamanho / alturaTotal)*multiplicador;
+            progress.style.height = progressHeight + "%";
+
+            //Liberando o botão
+            if (scroll.offsetHeight + scroll.scrollTop >= scroll.scrollHeight) {  
+                botao.attr("disabled", false);
+                botao.removeClass('cursor-not-allowed');
+                botao.removeClass('bg-opacity-50');
+                botao.addClass('border-purple-800');
+                botao.addClass('transition duration-500 ease-out transform hover:scale-105 hover:bg-purple-800');
+            }
+        }
+    
+    //Se ele estiver no mobile
+    }else{
+        scroll.onscroll = function(){
+            if (scroll.offsetHeight + scroll.scrollTop >= scroll.scrollHeight) {  
+                botao.attr("disabled", false);
+                botao.removeClass('cursor-not-allowed');
+                botao.removeClass('bg-opacity-50');
+                botao.addClass('border-purple-800');
+            }
+        
+        }
+    }
+       
+    </script>
+
+</html>
