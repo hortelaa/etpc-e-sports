@@ -164,17 +164,16 @@
     </div>
     <div class="relative -mt-20 ">
         <section id="wave" class="" >
-            <div class="absolute inset-0 wave wave1"></div>
-            <div class="absolute inset-0 wave wave2"></div>
-            <div class="absolute inset-0 wave wave3"></div>
-            <div class="absolute inset-0 wave wave4"></div>
+            <div class="absolute inset-0 sm:inset-8 md:inset-20 lg:inset-20 wave wave1"></div>
+            <div class="absolute inset-0 sm:inset-8 md:inset-20 lg:inset-20 wave wave2"></div>
+            <div class="absolute inset-0 sm:inset-8 md:inset-20 lg:inset-20 wave wave3"></div>
+            <div class="absolute inset-0 sm:inset-8 md:inset-20 lg:inset-20 wave wave4"></div>
         </section> 
     </div>
     
     <script src="jquery.min.js"></script>
 
     <script type="text/javascript ">
-        console.log('oi');
         //Variavel do botao para mudar o seu css
         var botao = $('#continuar');
 
@@ -190,7 +189,6 @@
             $(input).each(function() {
                 if ($(this).val() == '' || $(this).val() == null || $(this).val().length == 0) {
                     empty = true;
-            console.log('ta pegando');
 
                 }
             });
@@ -198,7 +196,6 @@
             //Caso o formulario estiver vazio
             //Adicionar efeitos de desabilitado no botao
             if (empty) {
-            console.log('ta denislo');
 
                 botao.attr("disabled", true);
                 botao.addClass('cursor-not-allowed');
