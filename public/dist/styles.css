@@ -17768,6 +17768,10 @@ video {
   background-image: url('/src/imgs/fundocadastro.png');
 }
 
+.bg-fundo2 {
+  background-image: url('jhin-camile.gif');
+}
+
 .from-transparent {
   --tw-gradient-from: transparent;
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(0, 0, 0, 0));
@@ -49109,6 +49113,10 @@ video {
     background-image: url('/src/imgs/fundocadastro.png');
   }
 
+  .sm\:bg-fundo2 {
+    background-image: url('jhin-camile.gif');
+  }
+
   .sm\:from-transparent {
     --tw-gradient-from: transparent;
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(0, 0, 0, 0));
@@ -80338,6 +80346,10 @@ video {
 
   .md\:bg-fundo {
     background-image: url('/src/imgs/fundocadastro.png');
+  }
+
+  .md\:bg-fundo2 {
+    background-image: url('jhin-camile.gif');
   }
 
   .md\:from-transparent {
@@ -111571,6 +111583,10 @@ video {
     background-image: url('/src/imgs/fundocadastro.png');
   }
 
+  .lg\:bg-fundo2 {
+    background-image: url('jhin-camile.gif');
+  }
+
   .lg\:from-transparent {
     --tw-gradient-from: transparent;
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(0, 0, 0, 0));
@@ -142802,6 +142818,10 @@ video {
     background-image: url('/src/imgs/fundocadastro.png');
   }
 
+  .xl\:bg-fundo2 {
+    background-image: url('jhin-camile.gif');
+  }
+
   .xl\:from-transparent {
     --tw-gradient-from: transparent;
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(0, 0, 0, 0));
@@ -174031,6 +174051,10 @@ video {
 
   .\32xl\:bg-fundo {
     background-image: url('/src/imgs/fundocadastro.png');
+  }
+
+  .\32xl\:bg-fundo2 {
+    background-image: url('jhin-camile.gif');
   }
 
   .\32xl\:from-transparent {
