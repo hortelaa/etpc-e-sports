@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         'fundo': "url('/src/imgs/fundocadastro.png')",
+        'fundo2': "url('jhin-camile.gif')",
        }
     },
   },
