@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width initial-scale=1.0" />
     <title>Cadastro</title>
     <link rel="stylesheet" href="dist/styles.css" />
-    <link rel="stylesheet" href="dist/style-cadastro-termos.css" />
+    <link rel="stylesheet" href="../src/css/cadastro-termos.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 </head>
 
 <body>
@@ -31,7 +32,7 @@
                     </section>
 
                     <!-- REGULAMENTO -->
-                    <section class="text-center  h-60" id="overflow">
+                    <section class="text-center h-60" id="overflow">
 
         <!-- Barra de rolagem -->
         <div class="barra-de-rolagem"></div>
@@ -88,31 +89,9 @@
         </section>
     </div>
     </div>
+    <script src="../src/js/cadastro-termos.js" ></script>
 </body>
 
 
-<script type="text/javascript ">
-
-
-    var botao = $('#continuar');
-
- 
-    
-    let scroll = document.getElementById('overflow');
-
-   
-        scroll.onscroll = function(){
-            if (scroll.offsetHeight + scroll.scrollTop >= scroll.scrollHeight) {  
-                botao.attr("disabled", false);
-                botao.removeClass('cursor-not-allowed');
-                botao.removeClass('bg-opacity-50');
-                botao.addClass('border-purple-800');
-                botao.addClass('transition duration-500 ease-out transform hover:scale-105 hover:bg-purple-800');
-            }
-        
-        }
-    
-       
-    </script>
 
 </html>
