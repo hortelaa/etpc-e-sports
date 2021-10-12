@@ -109,6 +109,21 @@
     animation-duration: 11s;
 }
 
+.circles li:nth-child(11) {
+    left: 35%;
+    width: 90px;
+    height: 90px;
+    animation-delay: 23s;
+}
+
+.circles li:nth-child(12) {
+    left: 20%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 2s;
+    animation-duration: 20s;
+}
+
 @keyframes animate {
 
     0% {
