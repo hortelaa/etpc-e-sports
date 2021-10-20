@@ -18,9 +18,9 @@ $conteudo = "
  Nick's: $nicks\n
 ";
 
-$arquivo = fopen("../info/info.txt" , "a+");
+$arquivo = fopen("info.txt" , "a+");
 fwrite($arquivo, $conteudo);
 
-echo "<meta http-equiv='refresh' content='0;URL=../../public/cadastro-termos.html'>";
+echo "<meta http-equiv='refresh' content='0;URL=../../../public/cadastro-termos.html'>";
 
 ?>
