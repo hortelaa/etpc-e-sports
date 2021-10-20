@@ -7,6 +7,10 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      colors:{
+        'camp-claro':'#510cc7',
+        'camp-escuro':'#8c2cda',
+      },
       backgroundImage: {
         'fundo': "url('/src/imgs/fundocadastro.png')",
         'fundo2': "url('jhin-camile.gif')",
