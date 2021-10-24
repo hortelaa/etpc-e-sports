@@ -134,7 +134,6 @@ opacity: 0.7  ;
 ::-webkit-scrollbar-track {
 background-color: transparent;
 background: rgba(0, 0, 0, 0.2);
-
 }
 
 
@@ -155,4 +154,27 @@ background-color: rgb(0,0, 0);
 /** Retire a linha abaixo para aparecer a barra de scroll**/
 ::-webkit-scrollbar{
 display: none;
+}
+
+.highlight{
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+.highlight:before {
+    content: "";
+    opacity: 50%;
+    position: absolute;
+    top: -10px;
+    left: -80px;
+    height: 100px;
+    width: 35px;
+    background: white;
+    transform: rotate(20deg);
+}
+
+.highlight:hover:before {
+    left: 690px;
+    transition: all 0.7s;
 }

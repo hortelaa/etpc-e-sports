@@ -1,48 +1,46 @@
 //Variavel do botao para mudar o seu css
 var botao = $('#continuar');
 
-//Variavel para verificar se esta preenchido
-var empty = true;
+var equipe = $(".equipe");
+var limite = $('#limite');
 
-var equipe = $('.equipe');
+var maxLength = 16;
 
-//Tá dando undenifed n sei pq, arrumar para colocar menos de 16 caracteres
-equipe.addEventListener("click", function(){
-    console.log(equipe.textContent);
-
+//Definindo Limite de Caracteres
+equipe.keyup(function() {
+    equipeTexto = equipe.val();
+    var tamanhoDoTexto = maxLength - equipeTexto.length;
+    limite.text(tamanhoDoTexto);
 });
 
-
+//Verificando o preenchimento de cada input
 $(input).keyup(function () {
-
-    empty = false;
-
-    //Verificando o preenchimento de cada input
+    var empty = false;
     $(input).each(function () {
         if ($(this).val() == '' || $(this).val() == null || $(this).val().length == 0) {
             empty = true;
-
         }
     });
-    
-    //Caso o formulario estiver vazio
-    //Adicionar efeitos de desabilitado no botao
-    if (empty) {
 
+    //Desabilitar botão caso formulario não estiver preenchido
+    if (empty) {
         botao.attr("disabled", true);
         botao.addClass('cursor-not-allowed');
         botao.addClass('bg-opacity-50');
-        botao.removeClass('border-purple-800');
-        botao.removeClass('transition duration-500 ease-out transform hover:scale-105 hover:bg-purple-800');
-        // transition duration-500 ease-out transform hover: scale-125 hover: bg-indigo-900;
+        botao.removeClass('border-purple-600');
+        botao.removeClass('bg-opacity-80');
+        botao.removeClass('highlight');
+        botao.removeClass('transition duration-500 ease-out transform hover:scale-105 hover:border-purple-800');
 
-        //Caso o formulario estiver preenchido
-        //Adicionar efeitos de habilitado no botao
+
+    //Habilitar botao caso formulario estiver preenchido
     } else {
         botao.attr("disabled", false);
         botao.removeClass('cursor-not-allowed');
         botao.removeClass('bg-opacity-50');
-        botao.addClass('border-purple-800');
-        botao.addClass('transition duration-500 ease-out transform hover:scale-105 hover:bg-purple-800');
+        botao.addClass('border-purple-600');
+        botao.addClass('bg-opacity-80');
+        botao.addClass('highlight');
+        botao.addClass('transition duration-500 ease-out transform hover:scale-105 hover:bg-purple-600 hover:border-purple-800');
     }
 });

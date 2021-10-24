@@ -32,7 +32,6 @@
             <form class="z-30 grid lg:gap-4 md:grid-cols-2 md:gap-4 lg:grid-cols-2 sm:flex-col" method="POST"
                 action="../src/assets/php/cadastro.php">
 
-
                 <!-- EMAIL -->
                 <div class="pt-3 mb-6 bg-gray-200 rounded ">
                     <label class="block mb-2 ml-3 text-sm font-bold text-gray-700" for=" email"
@@ -57,7 +56,9 @@
                                 d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                         </svg> Nome da
                         Equipe</label>
-                    <input type="text" name="equipe" id="input" placeholder="Ex: Bianca Lovers "
+                        <div class="float-right mr-6 text-sm font-thin text-right opacity-60" >Limite de Caracteres: <span id="limite">16</span></div>
+
+                    <input type="text" name="equipe" id="input" placeholder="Ex: Bianca Lovers" maxlength="16"
                         class="w-full px-3 pb-3 text-gray-700 transition duration-500 bg-gray-200 border-b-4 border-gray-300 rounded equipe focus:outline-none focus:border-purple-600 ">
                 </div>
 
@@ -125,6 +126,10 @@
                         placeholder="Ex: AlucardYT; TeemoDoidao; RatoBrasil... "
                         class="w-full px-3 pb-3 text-gray-700 transition duration-500 bg-gray-200 border-b-4 border-gray-300 rounded focus:outline-none focus:border-purple-600 ">
                 </div>
+                
+                <!-- RODAPÉ -->
+                <div class="pb-2 font-thin text-center md:-m-2 md:col-span-2 sm:flex-col">Está precisando de alguém para <span class="font-bold">completar o time </span> ou <span class="font-bold">não conhece ninguém  </span>da ETPC ?</div>
+                    <div class="pb-6 font-thin text-center md:-m-2 md:col-span-2 sm:flex-col">Entre em nosso Discord e econtre alguém aqui: <a class="text-purple-600 hover:text-purple-900" href="https://bit.ly/DiscordCampETPC">https://bit.ly/DiscordCampETPC</a> </div>
 
                 <!-- BOTÃO (pra ficar 3D é só adicionar = border-b-4)-->
                 <button
