@@ -7,6 +7,31 @@
     --clr-neon: hsl(317 100% 54%);
     --clr-bg: hsl(323 21% 16%);
   }
+  a {
+    color:violet;
+    text-decoration: none;
+    padding-bottom: 2px;
+    display: inline-block;
+    position: relative;
+  }
+
+  a:hover:after {
+    width:100%;
+    right: 0;
+  }
+  a:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 0;
+    position: absolute;
+    background: #a851e6b8;
+    transition: width 1s ease 0s, right 0.5s ease 0s;
+    width: 0;
+  } 
+
 .neon-button {
     font-size: 3rem;
     display: inline-block;
