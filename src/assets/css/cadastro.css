@@ -178,3 +178,27 @@ display: none;
     left: 690px;
     transition: all 0.7s;
 }
+a {
+    color: white;
+    text-decoration: none;
+    padding-bottom: 2px;
+    display: inline-block;
+    position: relative;
+  }
+
+a:hover:after {
+    width:100%;
+    right: 0;
+  }
+  a:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 0;
+    position: absolute;
+    background: #a851e6b8;
+    transition: width 1s ease 0s, right 0.5s ease 0s;
+    width: 0;
+  }
