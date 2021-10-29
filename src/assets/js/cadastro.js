@@ -30,7 +30,7 @@ $(input).keyup(function () {
         botao.removeClass('border-purple-600');
         botao.removeClass('bg-opacity-80');
         botao.removeClass('highlight');
-        botao.removeClass('transition duration-500 ease-out transform hover:scale-105 hover:border-purple-800');
+        botao.removeClass('transition duration-500 ease-out transform hover:scale-105 hover:bg-purple-600 hover:border-purple-800');
 
 
     //Habilitar botao caso formulario estiver preenchido
