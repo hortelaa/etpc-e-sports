@@ -22551,6 +22551,10 @@ video {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
+.font-denis {
+  font-family: Bai Jamjuree, sans-serif;
+}
+
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
@@ -32242,6 +32246,7 @@ video {
 /*/Estilização do "ETPC" /*/
 
 .etpc {
+  font-family: Bai Jamjuree, sans-serif;
   font-size: 2.25rem;
   line-height: 2.5rem;
   font-weight: 700;
@@ -54246,6 +54251,10 @@ video {
 
   .sm\:font-mono {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+
+  .sm\:font-denis {
+    font-family: Bai Jamjuree, sans-serif;
   }
 
   .sm\:text-xs {
@@ -85835,6 +85844,10 @@ video {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
+  .md\:font-denis {
+    font-family: Bai Jamjuree, sans-serif;
+  }
+
   .md\:text-xs {
     font-size: 0.75rem;
     line-height: 1rem;
@@ -117420,6 +117433,10 @@ video {
 
   .lg\:font-mono {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+
+  .lg\:font-denis {
+    font-family: Bai Jamjuree, sans-serif;
   }
 
   .lg\:text-xs {
@@ -149009,6 +149026,10 @@ video {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
+  .xl\:font-denis {
+    font-family: Bai Jamjuree, sans-serif;
+  }
+
   .xl\:text-xs {
     font-size: 0.75rem;
     line-height: 1rem;
@@ -180594,6 +180615,10 @@ video {
 
   .\32xl\:font-mono {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+
+  .\32xl\:font-denis {
+    font-family: Bai Jamjuree, sans-serif;
   }
 
   .\32xl\:text-xs {

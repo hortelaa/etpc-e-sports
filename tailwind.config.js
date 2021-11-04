@@ -7,6 +7,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      fontFamily:{
+        'denis': ['Bai Jamjuree', 'sans-serif']
+      },
       colors:{
         'camp-claro':'#510cc7',
         'camp-escuro':'#8c2cda',
