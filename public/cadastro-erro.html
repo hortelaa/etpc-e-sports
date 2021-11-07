@@ -7,15 +7,13 @@
   <title>ETPC-ESPORTS</title>
   <link rel="stylesheet" href="dist/styles.css" />
   <link rel="stylesheet" href="../src/assets/css/sobre.css" />
-  <link rel="stylesheet" href="../src/assets/css/cadastro-confirmacao.css" />
+  <link rel="stylesheet" href="../src/assets/css/cadastro-erro.css" />
   <link
     href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
     rel="stylesheet">
   <link rel="icon" href="../src/assets/imgs/logo.ico">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
 </head>
-
 <body class="absolute">
 
   <!-- FUNDO -->
@@ -24,19 +22,21 @@
 
     <!-- WHITE BOX -->
     <main class="max-w-full p-8 mx-auto my-10 bg-white rounded-lg shadow-2xl md:p-12">
-
+      
       <!-- CIRCULO -->
-      <svg class="checkmark mb-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52" width="800" height="800">
-        <circle class="checkmark__circle" cx="100" cy="100" r="25" fill="none" width="112" />
-        <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+      <svg class="mb-16" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
+        <circle class="path circle" fill="none" stroke="#D06079" stroke-width="6" stroke-miterlimit="10" cx="65.1"
+          cy="65.1" r="62.1" />
+        <line class="path line" fill="none" stroke="#D06079" stroke-width="6" stroke-linecap="round"
+          stroke-miterlimit="10" x1="34.4" y1="37.9" x2="95.8" y2="92.3" />
+        <line class="path line" fill="none" stroke="#D06079" stroke-width="6" stroke-linecap="round"
+          stroke-miterlimit="10" x1="95.8" y1="38" x2="34.4" y2="92.2" />
       </svg>
 
       <!-- TEXTO -->
-      <h1 class="relative justify-center text-2xl font-bold text-center font-denis mt-16">Cadastro Realizado com
-        Sucesso!</h1>
-      <h1 class="relative justify-center pt-4 text-2xl font-bold text-center font-denis">Você será redirecionado para o
-        site em <span class="text-camp-claro" id="timeLeft">10</span> segundos</h1>
-
+      <h1 class="relative justify-center text-2xl font-bold text-center font-denis">Ocorreu um erro no Cadastro :( </h1>
+      <h1 class="relative justify-center pt-4 text-2xl font-bold text-center font-denis">Tente novamente</h1>
+      
       <!-- DISCORD -->
       <div class="flex items-center justify-center">
         <svg xmlns="http://www.w3.org/2000/svg"
@@ -52,18 +52,5 @@
     </main>
   </div>
 </body>
-
-<script>
-  $(document).ready(function () {
-    window.setInterval(function () {
-      var timeLeft = $("#timeLeft").html();
-      if (eval(timeLeft) == 0) {
-        window.location = 'embreve.html';
-      } else {
-        $("#timeLeft").html(eval(timeLeft) - eval(1));
-      }
-    }, 1000);
-  });
-</script>
 
 </html>

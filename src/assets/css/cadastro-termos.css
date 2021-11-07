@@ -241,5 +241,27 @@ h1 {
     }
 
     /* FIM DA BARRA BACKUP */
-    /* Regular CSS rules here*/
+    
+.highlight{
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+.highlight:before {
+    content: "";
+    opacity: 50%;
+    position: absolute;
+    top: -10px;
+    left: -80px;
+    height: 100px;
+    width: 35px;
+    background: white;
+    transform: rotate(20deg);
+}
+
+.highlight:hover:before {
+    left: 715px;
+    transition: all 0.7s;
+}
 

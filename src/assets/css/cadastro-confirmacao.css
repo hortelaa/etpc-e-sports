@@ -18,14 +18,14 @@ body {
   }
   
   .checkmark {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     display: block;
     stroke-width: 4;
     stroke: #fff;
     stroke-miterlimit: 10;
-    margin: 10% auto;
+    margin: 40px auto 0;
     box-shadow: inset 0px 0px 0px #510cc7;
     animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
   }
@@ -52,7 +52,7 @@ body {
   }
   @keyframes fill {
     100% {
-      box-shadow: inset 0px 0px 0px 150px #510cc7;
+      box-shadow: inset 0px 0px 0px 130px #510cc7;
     }
   }
 
