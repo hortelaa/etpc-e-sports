@@ -22,3 +22,7 @@
 .animbtncontinuar{
     @apply transition duration-500 ease-out transform bg-purple-800 hover:scale-110 ;
 }
+
+#toggle:checked ~ label div.toggle-dot{
+    @apply translate-x-2;
+}
