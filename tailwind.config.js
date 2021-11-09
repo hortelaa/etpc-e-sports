@@ -13,6 +13,11 @@ module.exports = {
       colors:{
         'camp-claro':'#510cc7',
         'camp-escuro':'#8c2cda',
+        'etpc-azuldark':"#242443",
+        'etpc-azulight':"#00b6ca",
+        'etpc-amarelo':"#edb700",
+        'etpc-salmao':"#b15165", 
+        'etpc-branco':"#f0f0e8",
       },
       backgroundImage: {
         'fundo': "url('/src/imgs/fundocadastro.png')",
