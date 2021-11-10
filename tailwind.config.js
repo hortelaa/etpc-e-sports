@@ -18,6 +18,7 @@ module.exports = {
         'etpc-amarelo':"#edb700",
         'etpc-salmao':"#b15165", 
         'etpc-branco':"#f0f0e8",
+        
       },
       backgroundImage: {
         'fundo': "url('/src/imgs/fundocadastro.png')",

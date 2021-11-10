@@ -5,7 +5,7 @@
 /*/Estilização do "ETPC" /*/
 
 .etpc {
-    @apply text-4xl font-bold text-etpc-azulight font-denis;
+    @apply text-4xl font-bold text-etpc-amarelo font-denis;
 }
 
 /*/Estilização do "Botão acessar site" /*/

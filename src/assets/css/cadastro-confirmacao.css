@@ -1,5 +1,5 @@
 body {
-    background-image: url('../imgs/jhin-camile.gif');
+    background-image: url('../imgs/fundoindexblack.jpg');
     background-size: 100%;
     background-repeat: repeat-y;
     background-attachment: fixed;
@@ -12,7 +12,7 @@ body {
     stroke-dashoffset: 166;
     stroke-width: 5;
     stroke-miterlimit: 10;
-    stroke: #510cc7;
+    stroke: #00b6ca;
     fill: none;
     animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
   }
@@ -26,7 +26,7 @@ body {
     stroke: #fff;
     stroke-miterlimit: 10;
     margin: 40px auto 0;
-    box-shadow: inset 0px 0px 0px #510cc7;
+    box-shadow: inset 0px 0px 0px #00b6ca;
     animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
   }
   
@@ -52,7 +52,7 @@ body {
   }
   @keyframes fill {
     100% {
-      box-shadow: inset 0px 0px 0px 130px #510cc7;
+      box-shadow: inset 0px 0px 0px 130px #00b6ca;
     }
   }
 
@@ -73,7 +73,7 @@ a:hover:after {
     display: block;
     height: 2px;
     left: 0;
-    background: #510cc7;
+    background: #00b6ca;
     transition: width 1s ease 0s, right 0.5s ease 0s;
     width: 0;
   }

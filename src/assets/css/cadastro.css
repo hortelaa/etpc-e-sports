@@ -1,6 +1,6 @@
    /** Se colocar MAIN no lugar do BODY ele vai ficar dentro da caixa branca **/
    body {
-    background-image: url('../imgs/jhin-camile.gif');
+    background-image: url('../imgs/fundoindexblack.jpg');
     background-size: 100%;
     background-repeat: repeat-y;
     background-attachment: fixed;
@@ -19,6 +19,22 @@ section .wave {
 
 }
 
+li>ul                 { transform: translatex(100%) scale(0) }
+  li:hover>ul           { transform: translatex(101%) scale(1) }
+  li > button svg       { transform: rotate(-90deg) }
+  li:hover > button svg { transform: rotate(-270deg) }
+
+  /* Below styles fake what can be achieved with the tailwind config
+     you need to add the group-hover variant to scale and define your custom
+     min width style.
+  	 See https://codesandbox.io/s/tailwindcss-multilevel-dropdown-y91j7?file=/index.html
+  	 for implementation with config file
+  */
+  .group:hover .group-hover\:scale-100 { transform: scale(1) }
+  .group:hover .group-hover\:-rotate-180 { transform: rotate(180deg) }
+  .scale-0 { transform: scale(0) }
+  .min-w-32 { min-width: 8rem }
+  
 section .wave.wave1 {
     animation: animate 30s linear infinite;
     z-index: 10px;
@@ -77,11 +93,11 @@ section .wave.wave4 {
         0 0 7px #fff,
         0 0 10px #fff,
         0 0 21px #fff,
-        0 0 42px rgb(55, 0, 255),
-        0 0 82px rgb(55, 0, 255),
-        0 0 92px rgb(55, 0, 255),
-        0 0 102px rgb(55, 0, 255),
-        0 0 151px rgb(55, 0, 255);
+        0 0 42px #00b6ca,
+        0 0 82px #00b6ca,
+        0 0 92px #00b6ca,
+        0 0 102px #00b6ca,
+        0 0 151px #00b6ca;
 }
 
 h1 {
@@ -102,11 +118,11 @@ h1 {
             0 0 4px #fff,
             0 0 11px #fff,
             0 0 19px #fff,
-            0 0 40px rgb(68, 0, 255),
-            0 0 80px rgb(68, 0, 255),
-            0 0 90px rgb(68, 0, 255),
-            0 0 100px rgb(68, 0, 255),
-            0 0 150px rgb(68, 0, 255);
+            0 0 40px #00b6ca,
+            0 0 80px #00b6ca,
+            0 0 90px #00b6ca,
+            0 0 100px #00b6ca,
+            0 0 150px #00b6ca;
 
     }
 
@@ -197,16 +213,19 @@ display: none;
     height: 2px;
     left: 0;
     position: absolute;
-    background: #a851e6b8;
+    background: #00b6ca;
     transition: width 1s ease 0s, right 0.5s ease 0s;
     width: 0;
   }
-  .dropdown:hover .dropdown-menu {
-    display: block;
-  }
-  .dropdown{
-      cursor: pointer;
-  }
+ 
+ 
   select{
       cursor: pointer;
   }
+.borda-escura{
+    border-bottom-color: rgb(34, 180, 193);
+}
+
+.borda-clara{
+    border-bottom-color: #a7e9ef;
+}

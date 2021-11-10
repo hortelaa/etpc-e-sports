@@ -1,6 +1,6 @@
 body {
-    background-image: url('../imgs/jhin-camile.gif');
-    background-size: 100%;
+  background-image: url('../imgs/fundoindexblack.jpg');
+  background-size: 100%;
     background-repeat: repeat-y;
     background-attachment: fixed;
     height: 100%;
@@ -89,7 +89,7 @@ a:hover:after {
     display: block;
     height: 2px;
     left: 0;
-    background: #510cc7;
+    background: #b15165;
     transition: width 1s ease 0s, right 0.5s ease 0s;
     width: 0;
   }

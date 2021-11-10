@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ETPC-ESPORTS</title>
+    <title>ETPC E-SPORTS</title>
     <link rel="stylesheet" href="dist/styles.css" />
+    <link rel="icon" href="../src/assets/imgs/logonovabrancaetpc.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
@@ -13,12 +14,20 @@
 <style>
 </style>
 <!--BACKGROUND SINISTRO-->
-<body class="min-h-screen bg-center bg-no-repeat bg-cover bg-fundoindexblack">
+<body>
+    <div class="fixed z-10 min-w-full min-h-full bg-black opacity-90"></div>
+        <div class="fixed">
+        <!--Vídeo de fundo-->
+        <video id="videoBG" poster="/src/assets/imgs/poster.png" autoplay muted loop class="absolute z-10 min-w-full min-h-full max-w-none">
+                <source src="../src/assets/video/background.mp4" type="video/mp4">
+            </video>
+        </div>
+     <div class=""><img src="../src/assets/imgs/" alt=""></div>   
     <section>
         <!--Mobile-->
         <section class="relative z-20">
             <div class="flex items-center justify-center pt-20 pb-20 lg:hidden">
-               <img src="../src/assets/imgs/logoazuletpc.png" alt="" class="absolute pt-4 transform w-96 lg:text-center lg:scale-150 lg:w-72 ">
+               <img src="../src/assets/imgs/logonovabrancaetpc.png" alt="" class="absolute pt-4 transform w-96 lg:text-center lg:scale-150 lg:w-72 ">
             </div>
             <div class="flex items-center justify-center lg:hidden">
                 <h1 class="pt-12 text-4xl text-white font-denis">CAMPEONATO</h1>
@@ -26,26 +35,26 @@
             </div>
             <span class="flex items-center justify-center lg:hidden"><div><h2 class="text-4xl font-thin text-gray-400">2º EDIÇÃO</h2></div></span>
             <div class="flex items-center justify-center lg:hidden">
-                <p class="w-3/4 pt-4 font-mono text-white">Seja bem vindo ao ETPC E-SPORTS. Um site criado com muito ❤ & ☕, para ajudar você a participar do nosso campeonato com premiação de R$250,00 EM RP para a equipe vencedora!
+                <p class="w-3/4 pt-4 text-white font-denis">Seja bem vindo ao ETPC E-SPORTS. Um site criado com muito ❤ & ☕, para ajudar você a participar do nosso campeonato com premiação de R$250,00 EM RP para a equipe vencedora!
                     </p></p>
             </div>
             <div class="flex items-center justify-center pt-8 lg:hidden">
-                <button class="h-8 mb-8 font-mono font-bold text-white rounded shadow-md w-44 animbtnsite">Acessar Site</button>
-                <button class="h-8 mb-8 ml-6 font-mono font-bold text-white rounded shadow-md w-44 animbtncadastro lg:m-12">Cadastrar</button>
+                <button class="h-8 mb-8 font-bold text-white rounded shadow-md font-denis w-44 animbtnsite">Acessar Site</button>
+                <button class="h-8 mb-8 ml-6 font-bold text-white rounded shadow-md font-denis w-44 animbtncadastro lg:m-12">Cadastrar</button>
             </div>
         </section>
         <!--Fim Mobile-->
         <div class="relative z-20 hidden grid-cols-2 lg:grid">
             <!--Imagem Esquerda-->
             <div class="relative z-10 min-h-screen mr-10 bg-black bg-opacity-60 min-w-screen max-w-none">
-                    <div class="flex items-center justify-center pt-80">   
-                        <img src="../src/assets/imgs/logoazuletpc.png" alt="" class="absolute pt-8 transform lg:text-center">
+                    <div class="flex items-center justify-center pt-80"> 
+                        <img src="../src/assets/imgs/logonovaetpc.png" alt="" class="absolute pt-10 transform lg:text-center">
                 </div>
             </div>
             <!--Sessão Direita-->
             <div>
                 <div class="relative pt-56">
-                    <span class="flex"><h1 class="text-4xl font-bold text-white">CAMPEONATO</h1><h2 class="pl-4 underline etpc filter brightness-150">etpc</h2></span>
+                    <span class="flex"><h1 class="text-4xl font-bold text-etpc-amarelo">CAMPEONATO</h1><h2 class="pl-4 underline etpc">etpc</h2></span>
                     <span><div><h2 class="text-4xl font-thin text-gray-400 font-denis">2º EDIÇÃO</h2></div></span>
                     <div class="pt-4">
                         <p class="text-white font-denis lg:w-3/4">Seja bem vindo ao ETPC E-SPORTS. Um site criado com muito ❤ & ☕, para ajudar você a participar do nosso campeonato com premiação de R$250,00 EM RP para a equipe vencedora!

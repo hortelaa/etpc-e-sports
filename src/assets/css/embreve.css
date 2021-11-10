@@ -8,7 +8,7 @@
     --clr-bg: hsl(323 21% 16%);
   }
   a {
-    color:violet;
+    color:#00b6ca;
     text-decoration: none;
     padding-bottom: 2px;
     display: inline-block;
@@ -27,7 +27,7 @@
     height: 2px;
     left: 0;
     position: absolute;
-    background: #a851e6b8;
+    background: #00b6ca;
     transition: width 1s ease 0s, right 0.5s ease 0s;
     width: 0;
   } 

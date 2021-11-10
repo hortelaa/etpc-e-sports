@@ -75,21 +75,24 @@ $(input).keyup(function () {
     if (empty) {
         botao.attr("disabled", true);
         botao.addClass('cursor-not-allowed');
-        botao.addClass('bg-opacity-50');
-        botao.removeClass('border-purple-600');
+        botao.addClass('bg-opacity-40');
+        botao.addClass('borda-clara');
+        botao.removeClass('borda-escura');
         botao.removeClass('bg-opacity-80');
         botao.removeClass('highlight');
-        botao.removeClass('transition duration-500 ease-out transform hover:scale-105 hover:bg-purple-600 hover:border-purple-800');
+        botao.removeClass('transition duration-500 ease-out transform hover:scale-105 hover:bg-border-azulight');
 
 
     //Habilitar botao caso formulario estiver preenchido
     } else {
         botao.attr("disabled", false);
         botao.removeClass('cursor-not-allowed');
-        botao.removeClass('bg-opacity-50');
-        botao.addClass('border-purple-600');
+        botao.removeClass('bg-opacity-40');
+        botao.removeClass('borda-clara');
+        botao.addClass('borda-escura');
         botao.addClass('bg-opacity-80');
         botao.addClass('highlight');
-        botao.addClass('transition duration-500 ease-out transform hover:scale-105 hover:bg-purple-600 hover:border-purple-800');
+        botao.addClass('transition duration-500 ease-out transform hover:scale-105 hover:bg-border-azulight');
+
     }
 });
