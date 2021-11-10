@@ -22,6 +22,8 @@ module.exports = {
       backgroundImage: {
         'fundo': "url('/src/imgs/fundocadastro.png')",
         'fundo2': "url('jhin-camile.gif')",
+        'fundoindex': "url('/src/assets/imgs/fundoindex.jpg')",
+        'fundoindexblack': "url('/src/assets/imgs/fundoindexblack.jpg')",
        }
     },
   },
