@@ -1,10 +1,59 @@
 //Variavel do botao para mudar o seu css
 var botao = $('#continuar');
-
 var equipe = $(".equipe");
 var limite = $('#limite');
-
 var maxLength = 16;
+
+$(document).ready(function(){
+    $('#jogador1').removeClass('hidden');
+    $('#jogador2').addClass('hidden');
+    $('#jogador3').addClass('hidden');
+    $('#jogador4').addClass('hidden');
+    $('#jogador5').addClass('hidden');
+});
+
+$('#choice').change(function(){
+    var selected_item = $(this).val()
+
+    if(selected_item == "1"){
+        $('#jogador1').removeClass('hidden');
+        $('#jogador2').addClass('hidden');
+        $('#jogador3').addClass('hidden');
+        $('#jogador4').addClass('hidden');
+        $('#jogador5').addClass('hidden');
+    }
+    if(selected_item == "2"){
+        $('#jogador1').addClass('hidden');
+        $('#jogador2').removeClass('hidden');
+        $('#jogador3').addClass('hidden');
+        $('#jogador4').addClass('hidden');
+        $('#jogador5').addClass('hidden');
+    }
+    if(selected_item == "3"){
+        $('#jogador1').addClass('hidden');
+        $('#jogador2').addClass('hidden');
+        $('#jogador3').removeClass('hidden');
+        $('#jogador4').addClass('hidden');
+        $('#jogador5').addClass('hidden');
+    }
+    if(selected_item == "4"){
+        $('#jogador1').addClass('hidden');
+        $('#jogador2').addClass('hidden');
+        $('#jogador3').addClass('hidden');
+        $('#jogador4').removeClass('hidden');
+        $('#jogador5').addClass('hidden');
+    }
+    if(selected_item == "5"){
+        $('#jogador1').addClass('hidden');
+        $('#jogador2').addClass('hidden');
+        $('#jogador3').addClass('hidden');
+        $('#jogador4').addClass('hidden');
+        $('#jogador5').removeClass('hidden');
+    }
+});
+
+//Máscara Telefone
+$('.telefone').mask('(00)00000-0000', {'translation': {0: {pattern: /[0-9]/}}});
 
 //Definindo Limite de Caracteres
 equipe.keyup(function() {

@@ -9,119 +9,532 @@
     <link rel="stylesheet" href="../src/assets/css/cadastro.css" />
     <link rel="icon" href="../src/assets/imgs/logo.ico">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2.9.1/dist/umd/popper.min.js" charset="utf-8"></script>
+    <script src="../src/assets/js/jquery.mask.min.js" charset="utf-8"></script>
 </head>
+
 <body>
     <div class="fixed z-0 min-w-full min-h-full bg-black opacity-60"></div>
     <div class="min-h-screen body-bg md:pt-20 md:px-0 style=" font-family: 'Lato' ,sans-serif; ">
     <!-- HEADER-->
-    <header class="relative ">
-        <h1 class="p-3 text-4xl font-bold text-center text-white ">Bem-vindo ao ETPC E-SPORTS</h1>
+    <header class=" relative ">
+        <h1 class=" p-3 text-4xl font-bold text-center text-white ">Bem-vindo ao ETPC E-SPORTS</h1>
         </header>
         <!-- WHITE BOX -->
-        <div class="relative flex items-center justify-center ">
-            <main class="max-w-3xl p-8 mx-auto my-10 bg-white rounded-lg shadow-2xl md:p-12">
+        <div class=" relative flex items-center justify-center ">
+            <main class=" max-w-3xl p-8 mx-auto my-10 bg-white rounded-lg shadow-2xl md:p-12">
         <!-- TEXTO -->
         <section>
             <h3 class="text-2xl font-bold text-center ">👾 Inscreva sua equipe! 👾</h3>
-            <p class="pt-2 font-thin text-center text-gray-600 ">Para realizar o cadastro, precisa de pelo menos um aluno da ETPC</p>
+            <p class="pt-2 font-thin text-center text-gray-600 ">Para realizar o cadastro, precisa de pelo menos um
+                aluno da ETPC</p>
+        </section>
+
+        <!-- DEIXAR BONITO -->
+        <section class="mt-10 mb-6 flex justify-end relative font-bold">
+            <select
+                class="text-etpc-azulight text-lg rounded-lg bg-transparent font-bold appearance-none outline-none custom-select"
+                id="choice">
+                <option value="1">Jogador 1</option>
+                <option value="2">Jogador 2</option>
+                <option value="3">Jogador 3</option>
+                <option value="4">Jogador 4</option>
+                <option value="5">Jogador 5</option>
+            </select>
+            <label for="choice">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 pt-1" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </label>
         </section>
 
         <!-- FORMULARIO -->
-        <section class="mt-10 ">
-                <!-- NOME DA EQUIPE-->
-                <div class="pt-3 mb-6 bg-gray-200 rounded sm:flex-col z-30">
-                    <label class="block mb-2 ml-3 text-sm font-bold text-gray-700 " for="text "
-                        style="display: inline-flex;"><svg style="color:rgb(68, 0, 255);"
-                            xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-1" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                        </svg> Nome da
-                        Equipe</label>
-                        <div class="float-right mr-6 text-sm text-right opacity-50 font-extralight" >Limite de Caracteres: <span id="limite">16</span></div>
+        <form method="POST" action="../src/assets/php/cadastro.php">
+            <div class="pt-3 mb-6 bg-gray-200 rounded sm:flex-col z-30">
+                <label class="block mb-2 ml-3 text-sm font-bold text-gray-700 " for="text"
+                    style="display: inline-flex;"><svg style="color:rgb(68, 0, 255);" xmlns="http://www.w3.org/2000/svg"
+                        class="w-5 h-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                            d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg> Nome da
+                    Equipe</label>
+                <div class="float-right mr-6 text-sm text-right opacity-50 font-extralight">Limite de
+                    Caracteres: <span id="limite">16</span></div>
+                <input type="text" name="equipe" id="input" placeholder="Ex: Bianca Lovers" maxlength="16"
+                    class="w-ful px-3 pb-3 text-gray-700 transition duration-500 bg-gray-200 border-b-4 border-gray-300 rounded equipe focus:outline-none focus:border-purple-600 w-full">
+            </div>
 
-                    <input type="text" name="equipe" id="input" placeholder="Ex: Bianca Lovers" maxlength="16"
-                        class="w-ful px-3 pb-3 text-gray-700 transition duration-500 bg-gray-200 border-b-4 border-gray-300 rounded equipe focus:outline-none focus:border-purple-600 w-full">
+            <!-- JOGADOR 1-->
+            <jogador1 id="jogador1" class="hidden">
+                <div class="z-30 grid lg:gap-4 md:grid-cols-2 md:gap-4 lg:grid-cols-2 sm:flex-col">
+                    <!-- EMAIL 1 -->
+                    <div class="pt-3 mb-6 bg-gray-200 rounded ">
+                        <label class="block mb-2 ml-3 text-sm font-bold text-gray-700" for="email"
+                            style="display: inline-flex;"><svg style="color:rgb(68, 0, 255);"
+                                xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-1" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            Email do Jogador 1</label>
+                        </svg>
+                        <input type="email" name="email" id="input" placeholder="Ex: etpc@gmail.com.br "
+                            class="w-full px-3 pb-3 text-gray-700 transition duration-500 bg-gray-200 border-b-4 border-gray-300 rounded focus:outline-none focus:border-purple-600 ">
+                    </div>
+                    <!-- TELEFONE 1 -->
+                    <div class="pt-3 mb-6 bg-gray-200 rounded ">
+                        <label class="block mb-2 ml-3 text-sm font-bold text-gray-700" for="telefone"
+                            style="display: inline-flex;"><svg style="color:rgb(68, 0, 255);"
+                                xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-1" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            Telefone do Jogador 1</label>
+                        <input type="text" name="telefone" id="input" placeholder="Ex: 2499872509"
+                            class="telefone w-full px-3 pb-3 text-gray-700 transition duration-500 bg-gray-200 border-b-4 border-gray-300 rounded focus:outline-none focus:border-purple-600 ">
+                    </div>
+                    <!-- NOME COMPLETO 1 -->
+                    <div class="pt-3 mb-6 bg-gray-200 rounded ">
+                        <label class="block mb-2 ml-3 text-sm font-bold text-gray-700 " for="text"
+                            style="display: inline-flex;"><svg style="color:rgb(68, 0, 255);"
+                                xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-1" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                            </svg> Nome Completo do Jogador 1
+                        </label>
+                        <input type="text" name="nome" id="input" placeholder="Ex: João Silva Oliveira"
+                            class="w-full px-3 pb-3 text-gray-700 transition duration-500 bg-gray-200 border-b-4 border-gray-300 rounded focus:outline-none focus:border-purple-600 ">
+                    </div>
+                    <!-- MATRICULA 1 -->
+                    <div class="pt-3 mb-6 bg-gray-200 rounded ">
+                        <label class="block mb-2 ml-3 text-sm font-bold text-gray-700 " for="text"
+                            style="display: inline-flex;"><svg style="color:rgb(68, 0, 255);"
+                                xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-1" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path d="M12 14l9-5-9-5-9 5 9 5z" />
+                                <path
+                                    d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
+                            </svg> Matrícula do Jogador 1
+                        </label>
+                        <input type="text" name="matricula" id="input" placeholder="Ex: 218102 ou Não sou aluno ETPC"
+                            class="w-full px-3 pb-3 text-gray-700 transition duration-500 bg-gray-200 border-b-4 border-gray-300 rounded focus:outline-none focus:border-purple-600 ">
+                    </div>
+                    <!-- TURMA E CURSO 1 -->
+                    <div class="pt-3 mb-6 bg-gray-200 rounded ">
+                        <label class="block mb-2 ml-3 text-sm font-bold text-gray-700 " for="text"
+                            style="display: inline-flex;"><svg style="color:rgb(68, 0, 255);"
+                                xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-1" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                            </svg> Turma e Curso do Jogador 1
+                            ⠀</label>
+                        <input type="text" name="turma-e-curso" id="input"
+                            placeholder="Ex: 3ºB Mecatrônica ou Não sou aluno ETPC"
+                            class="w-full px-3 pb-3 text-gray-700 transition duration-500 bg-gray-200 border-b-4 border-gray-300 rounded focus:outline-none focus:border-purple-600 ">
+                    </div>
+                    <!-- NICK DOS INTEGRANTES 1-->
+                    <div class="pt-3 mb-6 bg-gray-200 rounded ">
+                        <label class="block mb-2 ml-3 text-sm font-bold text-gray-700 " for="text"
+                            style="display: inline-flex;"><svg style="color:rgb(68, 0, 255);"
+                                xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-1" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2" />
+                            </svg> Nick do
+                            Jogador 1</label>
+                        <input type="text" name="nick-dos-integrantes-da-equipe" id="input" placeholder="Ex: AlucardYT "
+                            class="w-full px-3 pb-3 text-gray-700 transition duration-500 bg-gray-200 border-b-4 border-gray-300 rounded focus:outline-none focus:border-purple-600 ">
+                    </div>
                 </div>
-                <form class="z-30 grid lg:gap-4 md:grid-cols-2 md:gap-4 lg:grid-cols-2 sm:flex-col" method="POST"
-                action="../src/assets/php/cadastro.php">
-                <!-- NOME COMPLETO -->
-                <div class="pt-3 mb-6 bg-gray-200 rounded ">
-                    <label class="block mb-2 ml-3 text-sm font-bold text-gray-700 " for="text"
-                        style="display: inline-flex;"><svg style="color:rgb(68, 0, 255);"
-                            xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-1" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-                        </svg> Nome Completo
-                        dos
-                        Integrantes</label>
-                    <input type="text" name="nome" id="input" placeholder="Ex: João Silva Oliveira; Rodrigo Esteves..."
-                        class="w-full px-3 pb-3 text-gray-700 transition duration-500 bg-gray-200 border-b-4 border-gray-300 rounded focus:outline-none focus:border-purple-600 ">
-                </div>
+            </jogador1>
+            <!-- FIM DO JOGADOR 1 -->
 
-                <!-- MATRICULA -->
-                <div class="pt-3 mb-6 bg-gray-200 rounded ">
-                    <label class="block mb-2 ml-3 text-sm font-bold text-gray-700 " for="text "
-                        style="display: inline-flex;"><svg style="color:rgb(68, 0, 255);"
-                            xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-1" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path d="M12 14l9-5-9-5-9 5 9 5z" />
-                            <path
-                                d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
-                        </svg> Matrícula
-                        do(s)
-                        aluno(s)
-                        ETPC</label>
-                    <input type="text" name="matricula" id="input" placeholder="Ex: 218102; 240687; 178621... "
-                        class="w-full px-3 pb-3 text-gray-700 transition duration-500 bg-gray-200 border-b-4 border-gray-300 rounded focus:outline-none focus:border-purple-600 ">
+            <!-- JOGADOR 2-->
+            <jogador2 class="hidden" id="jogador2">
+                <div class="z-30 grid lg:gap-4 md:grid-cols-2 md:gap-4 lg:grid-cols-2 sm:flex-col">
+                    <!-- EMAIL 2 -->
+                    <div class="pt-3 mb-6 bg-gray-200 rounded ">
+                        <label class="block mb-2 ml-3 text-sm font-bold text-gray-700" for="email"
+                            style="display: inline-flex;"><svg style="color:rgb(68, 0, 255);"
+                                xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-1" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            Email do Jogador 2</label>
+                        </svg>
+                        <input type="email" name="email2" id=" input" placeholder="Ex: etpc@gmail.com.br "
+                            class="w-full px-3 pb-3 text-gray-700 transition duration-500 bg-gray-200 border-b-4 border-gray-300 rounded focus:outline-none focus:border-purple-600 ">
+                    </div>
+                    <!-- TELEFONE 2 -->
+                    <div class="pt-3 mb-6 bg-gray-200 rounded ">
+                        <label class="block mb-2 ml-3 text-sm font-bold text-gray-700" for="text"
+                            style="display: inline-flex;"><svg style="color:rgb(68, 0, 255);"
+                                xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-1" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            Telefone do Jogador 2</label>
+                        <input type="text" name="telefone2" id="input" placeholder="Ex: 2499872509"
+                            class="telefone w-full px-3 pb-3 text-gray-700 transition duration-500 bg-gray-200 border-b-4 border-gray-300 rounded focus:outline-none focus:border-purple-600 ">
+                    </div>
+                    <!-- NOME COMPLETO 2 -->
+                    <div class="pt-3 mb-6 bg-gray-200 rounded ">
+                        <label class="block mb-2 ml-3 text-sm font-bold text-gray-700 " for="text"
+                            style="display: inline-flex;"><svg style="color:rgb(68, 0, 255);"
+                                xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-1" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                            </svg> Nome Completo
+                            do
+                            Jogador 2</label>
+                        <input type="text" name="nome2" id="input" placeholder="Ex: João Silva Oliveira"
+                            class="w-full px-3 pb-3 text-gray-700 transition duration-500 bg-gray-200 border-b-4 border-gray-300 rounded focus:outline-none focus:border-purple-600 ">
+                    </div>
+                    <!-- MATRICULA 2 -->
+                    <div class="pt-3 mb-6 bg-gray-200 rounded ">
+                        <label class="block mb-2 ml-3 text-sm font-bold text-gray-700 " for="text"
+                            style="display: inline-flex;"><svg style="color:rgb(68, 0, 255);"
+                                xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-1" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path d="M12 14l9-5-9-5-9 5 9 5z" />
+                                <path
+                                    d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
+                            </svg> Matrícula
+                            do Jogador 2
+                        </label>
+                        <input type="text" name="matricula2" id="input" placeholder="Ex: 218102 ou Não sou aluno ETPC "
+                            class="w-full px-3 pb-3 text-gray-700 transition duration-500 bg-gray-200 border-b-4 border-gray-300 rounded focus:outline-none focus:border-purple-600 ">
+                    </div>
+                    <!-- TURMA E CURSO 2 -->
+                    <div class="pt-3 mb-6 bg-gray-200 rounded ">
+                        <label class="block mb-2 ml-3 text-sm font-bold text-gray-700 " for="text"
+                            style="display: inline-flex;"><svg style="color:rgb(68, 0, 255);"
+                                xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-1" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                            </svg> Turma e Curso
+                            do Jogador 2⠀ </label>
+                        <input type="text" name="turma-e-curso2" id="input"
+                            placeholder="Ex: 3ºB Mecatrônica ou Não sou aluno ETPC "
+                            class="w-full px-3 pb-3 text-gray-700 transition duration-500 bg-gray-200 border-b-4 border-gray-300 rounded focus:outline-none focus:border-purple-600 ">
+                    </div>
+                    <!-- NICK DOS INTEGRANTES 2 -->
+                    <div class="pt-3 mb-6 bg-gray-200 rounded ">
+                        <label class="block mb-2 ml-3 text-sm font-bold text-gray-700 " for="text"
+                            style="display: inline-flex;"><svg style="color:rgb(68, 0, 255);"
+                                xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-1" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2" />
+                            </svg> Nick do
+                            Jogador 2</label>
+                        <input type="text" name="nick-dos-integrantes-da-equipe2" id="input" placeholder="Ex: AlucardYT"
+                            class="w-full px-3 pb-3 text-gray-700 transition duration-500 bg-gray-200 border-b-4 border-gray-300 rounded focus:outline-none focus:border-purple-600 ">
+                    </div>
                 </div>
+            </jogador2>
+            <!-- FIM DO JOGADOR 2 -->
 
-                <!-- TURMA E CURSO -->
-                <div class="pt-3 mb-6 bg-gray-200 rounded ">
-                    <label class="block mb-2 ml-3 text-sm font-bold text-gray-700 " for="text "
-                        style="display: inline-flex;"><svg style="color:rgb(68, 0, 255);"
-                            xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-1" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
-                        </svg> Turma e Curso
-                        do(s)
-                        aluno(s) ETPC⠀⠀ </label>
-                    <input type="text" name="turma-e-curso" id="input"
-                        placeholder="Ex: 3ºB Mecatrônica; 2ºA Informática; 2º Admi.. "
-                        class="w-full px-3 pb-3 text-gray-700 transition duration-500 bg-gray-200 border-b-4 border-gray-300 rounded focus:outline-none focus:border-purple-600 ">
+            <!-- JOGADOR 3-->
+            <jogador3 class="hidden" id="jogador3">
+                <div class="z-30 grid lg:gap-4 md:grid-cols-2 md:gap-4 lg:grid-cols-2 sm:flex-col">
+                    <!-- EMAIL 3 -->
+                    <div class="pt-3 mb-6 bg-gray-200 rounded ">
+                        <label class="block mb-2 ml-3 text-sm font-bold text-gray-700" for="email"
+                            style="display: inline-flex;"><svg style="color:rgb(68, 0, 255);"
+                                xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-1" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            Email do Jogador 3</label>
+                        </svg>
+                        <input type="email" name="email3" id="input" placeholder="Ex: etpc@gmail.com.br "
+                            class="w-full px-3 pb-3 text-gray-700 transition duration-500 bg-gray-200 border-b-4 border-gray-300 rounded focus:outline-none focus:border-purple-600 ">
+                    </div>
+                    <!-- TELEFONE 3-->
+                    <div class="pt-3 mb-6 bg-gray-200 rounded ">
+                        <label class="block mb-2 ml-3 text-sm font-bold text-gray-700" for="text"
+                            style="display: inline-flex;"><svg style="color:rgb(68, 0, 255);"
+                                xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-1" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            Telefone do Jogador 3</label>
+                        <input type="text" name="telefone3" id="input" placeholder="Ex: 2499872509"
+                            class="telefone w-full px-3 pb-3 text-gray-700 transition duration-500 bg-gray-200 border-b-4 border-gray-300 rounded focus:outline-none focus:border-purple-600 ">
+                    </div>
+                    <!-- NOME COMPLETO 3 -->
+                    <div class="pt-3 mb-6 bg-gray-200 rounded ">
+                        <label class="block mb-2 ml-3 text-sm font-bold text-gray-700 " for="text"
+                            style="display: inline-flex;"><svg style="color:rgb(68, 0, 255);"
+                                xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-1" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                            </svg> Nome Completo
+                            do Jogador 3</label>
+                        <input type="text" name="nome3" id="input" placeholder="Ex: João Silva Oliveira"
+                            class="w-full px-3 pb-3 text-gray-700 transition duration-500 bg-gray-200 border-b-4 border-gray-300 rounded focus:outline-none focus:border-purple-600 ">
+                    </div>
+                    <!-- MATRICULA 3 -->
+                    <div class="pt-3 mb-6 bg-gray-200 rounded ">
+                        <label class="block mb-2 ml-3 text-sm font-bold text-gray-700 " for="text"
+                            style="display: inline-flex;"><svg style="color:rgb(68, 0, 255);"
+                                xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-1" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path d="M12 14l9-5-9-5-9 5 9 5z" />
+                                <path
+                                    d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
+                            </svg> Matrícula
+                            do Jogador 3</label>
+                        <input type="text" name="matricula3" id="input" placeholder="Ex: 218102 ou Não sou aluno ETPC."
+                            class="w-full px-3 pb-3 text-gray-700 transition duration-500 bg-gray-200 border-b-4 border-gray-300 rounded focus:outline-none focus:border-purple-600 ">
+                    </div>
+                    <!-- TURMA E CURSO 3 -->
+                    <div class="pt-3 mb-6 bg-gray-200 rounded ">
+                        <label class="block mb-2 ml-3 text-sm font-bold text-gray-700 " for="text"
+                            style="display: inline-flex;"><svg style="color:rgb(68, 0, 255);"
+                                xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-1" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                            </svg> Turma e Curso do Jogador 3⠀ </label>
+                        <input type="text" name="turma-e-curso3" id="input"
+                            placeholder="Ex: 3ºB Mecatrônica ou Não sou aluno ETPC"
+                            class="w-full px-3 pb-3 text-gray-700 transition duration-500 bg-gray-200 border-b-4 border-gray-300 rounded focus:outline-none focus:border-purple-600 ">
+                    </div>
+                    <!-- NICK DOS INTEGRANTES 3 -->
+                    <div class="pt-3 mb-6 bg-gray-200 rounded ">
+                        <label class="block mb-2 ml-3 text-sm font-bold text-gray-700 " for="text"
+                            style="display: inline-flex;"><svg style="color:rgb(68, 0, 255);"
+                                xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-1" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2" />
+                            </svg> Nick do Jogador 3</label>
+                        <input type="text" name="nick-dos-integrantes-da-equipe3" id="input" placeholder="Ex: AlucardYT"
+                            class="w-full px-3 pb-3 text-gray-700 transition duration-500 bg-gray-200 border-b-4 border-gray-300 rounded focus:outline-none focus:border-purple-600 ">
+                    </div>
                 </div>
+            </jogador3>
+            <!-- FIM DO JOGADOR 3 -->
 
-                <!-- NICK DOS INTEGRANTES -->
-                <div class="pt-3 mb-6 bg-gray-200 rounded ">
-                    <label class="block mb-2 ml-3 text-sm font-bold text-gray-700 " for="text "
-                        style="display: inline-flex;"><svg style="color:rgb(68, 0, 255);"
-                            xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-1" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2" />
-                        </svg> Nick's dos
-                        Jogadores</label>
-                    <input type="text" name="nick-dos-integrantes-da-equipe" id="input"
-                        placeholder="Ex: AlucardYT; Angie8; RatoBrasil... "
-                        class="w-full px-3 pb-3 text-gray-700 transition duration-500 bg-gray-200 border-b-4 border-gray-300 rounded focus:outline-none focus:border-purple-600 ">
+            <!-- JOGADOR 4-->
+            <jogador4 class="hidden" id="jogador4">
+                <div class="z-30 grid lg:gap-4 md:grid-cols-2 md:gap-4 lg:grid-cols-2 sm:flex-col">
+                    <!-- EMAIL 4 -->
+                    <div class="pt-3 mb-6 bg-gray-200 rounded ">
+                        <label class="block mb-2 ml-3 text-sm font-bold text-gray-700" for="text"
+                            style="display: inline-flex;"><svg style="color:rgb(68, 0, 255);"
+                                xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-1" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            Email do Jogador 4</label>
+                        </svg>
+                        <input type="email" name="email4" id="input" placeholder="Ex: etpc@gmail.com.br "
+                            class="w-full px-3 pb-3 text-gray-700 transition duration-500 bg-gray-200 border-b-4 border-gray-300 rounded focus:outline-none focus:border-purple-600 ">
+                    </div>
+                    <!-- TELEFONE 4 -->
+                    <div class="pt-3 mb-6 bg-gray-200 rounded ">
+                        <label class="block mb-2 ml-3 text-sm font-bold text-gray-700" for="text"
+                            style="display: inline-flex;"><svg style="color:rgb(68, 0, 255);"
+                                xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-1" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            Telefone do Jogador 4</label>
+                        <input type="text" name="telefone4" id="input" placeholder="Ex: 2499872509"
+                            class="telefone w-full px-3 pb-3 text-gray-700 transition duration-500 bg-gray-200 border-b-4 border-gray-300 rounded focus:outline-none focus:border-purple-600 ">
+                    </div>
+                    <!-- NOME COMPLETO 4 -->
+                    <div class="pt-3 mb-6 bg-gray-200 rounded ">
+                        <label class="block mb-2 ml-3 text-sm font-bold text-gray-700 " for="text"
+                            style="display: inline-flex;"><svg style="color:rgb(68, 0, 255);"
+                                xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-1" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                            </svg> Nome Completo
+                            do Jogador 4</label>
+                        <input type="text" name="nome4" id="input" placeholder="Ex: João Silva Oliveira"
+                            class="w-full px-3 pb-3 text-gray-700 transition duration-500 bg-gray-200 border-b-4 border-gray-300 rounded focus:outline-none focus:border-purple-600 ">
+                    </div>
+                    <!-- MATRICULA 4 -->
+                    <div class="pt-3 mb-6 bg-gray-200 rounded ">
+                        <label class="block mb-2 ml-3 text-sm font-bold text-gray-700 " for="text"
+                            style="display: inline-flex;"><svg style="color:rgb(68, 0, 255);"
+                                xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-1" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path d="M12 14l9-5-9-5-9 5 9 5z" />
+                                <path
+                                    d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
+                            </svg> Matrícula
+                            do Jogador 4</label>
+                        <input type="text" name="matricula4" id="input" placeholder="Ex: 218102 ou Não sou aluno ETPC "
+                            class="w-full px-3 pb-3 text-gray-700 transition duration-500 bg-gray-200 border-b-4 border-gray-300 rounded focus:outline-none focus:border-purple-600 ">
+                    </div>
+                    <!-- TURMA E CURSO 4 -->
+                    <div class="pt-3 mb-6 bg-gray-200 rounded ">
+                        <label class="block mb-2 ml-3 text-sm font-bold text-gray-700 " for="text"
+                            style="display: inline-flex;"><svg style="color:rgb(68, 0, 255);"
+                                xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-1" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                            </svg> Turma e Curso
+                            do Jogador 4⠀ </label>
+                        <input type="text" name="turma-e-curso4" id="input"
+                            placeholder="Ex: 3ºB Mecatrônica ou Não sou aluno ETPC"
+                            class="w-full px-3 pb-3 text-gray-700 transition duration-500 bg-gray-200 border-b-4 border-gray-300 rounded focus:outline-none focus:border-purple-600 ">
+                    </div>
+                    <!-- NICK DOS INTEGRANTES 4 -->
+                    <div class="pt-3 mb-6 bg-gray-200 rounded ">
+                        <label class="block mb-2 ml-3 text-sm font-bold text-gray-700 " for="text"
+                            style="display: inline-flex;"><svg style="color:rgb(68, 0, 255);"
+                                xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-1" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2" />
+                            </svg> Nick do Jogador 4</label>
+                        <input type="text" name="nick-dos-integrantes-da-equipe4" id="input" placeholder="Ex: AlucardYT"
+                            class="w-full px-3 pb-3 text-gray-700 transition duration-500 bg-gray-200 border-b-4 border-gray-300 rounded focus:outline-none focus:border-purple-600 ">
+                    </div>
                 </div>
-                
+            </jogador4>
+            <!-- FIM DO JOGADOR 4 -->
+
+            <!-- JOGADOR 5-->
+            <jogador5 class="hidden" id="jogador5">
+                <div class="z-30 grid lg:gap-4 md:grid-cols-2 md:gap-4 lg:grid-cols-2 sm:flex-col">
+                    <!-- EMAIL 5-->
+                    <div class="pt-3 mb-6 bg-gray-200 rounded ">
+                        <label class="block mb-2 ml-3 text-sm font-bold text-gray-700" for="input"
+                            style="display: inline-flex;"><svg style="color:rgb(68, 0, 255);"
+                                xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-1" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            Email do Jogador 5</label>
+                        </svg>
+                        <input type="email" name="email5" id="input" placeholder="Ex: etpc@gmail.com.br "
+                            class="w-full px-3 pb-3 text-gray-700 transition duration-500 bg-gray-200 border-b-4 border-gray-300 rounded focus:outline-none focus:border-purple-600 ">
+                    </div>
+                    <!-- TELEFONE 5-->
+                    <div class="pt-3 mb-6 bg-gray-200 rounded ">
+                        <label class="block mb-2 ml-3 text-sm font-bold text-gray-700" for="input"
+                            style="display: inline-flex;"><svg style="color:rgb(68, 0, 255);"
+                                xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-1" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            Telefone do Jogador 5</label>
+                        <input type="text" name="telefone5" id="input" placeholder="Ex: 2499872509"
+                            class="telefone w-full px-3 pb-3 text-gray-700 transition duration-500 bg-gray-200 border-b-4 border-gray-300 rounded focus:outline-none focus:border-purple-600 ">
+                    </div>
+                    <!-- NOME COMPLETO 5 -->
+                    <div class="pt-3 mb-6 bg-gray-200 rounded ">
+                        <label class="block mb-2 ml-3 text-sm font-bold text-gray-700 " for="text"
+                            style="display: inline-flex;"><svg style="color:rgb(68, 0, 255);"
+                                xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-1" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                            </svg> Nome Completo
+                            do Jogador 5</label>
+                        <input type="text" name="nome5" id="input" placeholder="Ex: João Silva Oliveira"
+                            class="w-full px-3 pb-3 text-gray-700 transition duration-500 bg-gray-200 border-b-4 border-gray-300 rounded focus:outline-none focus:border-purple-600 ">
+                    </div>
+                    <!-- MATRICULA 5 -->
+                    <div class="pt-3 mb-6 bg-gray-200 rounded ">
+                        <label class="block mb-2 ml-3 text-sm font-bold text-gray-700 " for="text"
+                            style="display: inline-flex;"><svg style="color:rgb(68, 0, 255);"
+                                xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-1" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path d="M12 14l9-5-9-5-9 5 9 5z" />
+                                <path
+                                    d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
+                            </svg> Matrícula
+                            do Jogador 5</label>
+                        <input type="text" name="matricula5" id="input" placeholder="Ex: 218102 ou Não sou aluno ETPC"
+                            class="w-full px-3 pb-3 text-gray-700 transition duration-500 bg-gray-200 border-b-4 border-gray-300 rounded focus:outline-none focus:border-purple-600 ">
+                    </div>
+                    <!-- TURMA E CURSO 5-->
+                    <div class="pt-3 mb-6 bg-gray-200 rounded ">
+                        <label class="block mb-2 ml-3 text-sm font-bold text-gray-700 " for="text"
+                            style="display: inline-flex;"><svg style="color:rgb(68, 0, 255);"
+                                xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-1" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                            </svg> Turma e Curso
+                            do Jogador 5⠀ </label>
+                        <input type="text" name="turma-e-curso5" id="input"
+                            placeholder="Ex: 3ºB Mecatrônica ou Não sou aluno ETPC"
+                            class="w-full px-3 pb-3 text-gray-700 transition duration-500 bg-gray-200 border-b-4 border-gray-300 rounded focus:outline-none focus:border-purple-600 ">
+                    </div>
+                    <!-- NICK DOS INTEGRANTES 5-->
+                    <div class="pt-3 mb-6 bg-gray-200 rounded ">
+                        <label class="block mb-2 ml-3 text-sm font-bold text-gray-700 " for="text"
+                            style="display: inline-flex;"><svg style="color:rgb(68, 0, 255);"
+                                xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-1" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2" />
+                            </svg> Nick do Jogador 5</label>
+                        <input type="text" name="nick-dos-integrantes-da-equipe5" id="input" placeholder="Ex: AlucardYT"
+                            class="w-full px-3 pb-3 text-gray-700 transition duration-500 bg-gray-200 border-b-4 border-gray-300 rounded focus:outline-none focus:border-purple-600 ">
+                    </div>
+                </div>
+            </jogador5>
+            <!-- FIM DO JOGADOR 5 -->
+
+            <div class="z-30 grid lg:gap-4 md:grid-cols-2 md:gap-4 lg:grid-cols-2 sm:flex-col">
                 <!-- RODAPÉ -->
-                <div class="pb-2 font-thin text-center md:-m-2 md:col-span-2 sm:flex-col">Está precisando de alguém para <span class="font-bold">completar o time </span> ou <span class="font-bold">não conhece ninguém  </span>da ETPC ?</div>
-                    <div class="pb-6 font-thin text-center md:-m-2 md:col-span-2 sm:flex-col">Entre em nosso Discord e encontre alguém aqui: <a class="text-purple-600 hover:text-purple-900" href="https://bit.ly/DiscordCampETPC">https://bit.ly/DiscordCampETPC</a> </div>
+                <div class="pb-2 font-thin text-center md:-m-2 md:col-span-2 sm:flex-col">Está precisando de
+                    alguém para <span class="font-bold">completar o time </span> ou <span class="font-bold">não
+                        conhece ninguém </span>da ETPC ?</div>
+                <div class="pb-6 font-thin text-center md:-m-2 md:col-span-2 sm:flex-col">Entre em nosso
+                    Discord
+                    e encontre alguém aqui: <a class="discord text-purple-600 hover:text-purple-900"
+                        href="https://bit.ly/DiscordCampETPC">https://bit.ly/DiscordCampETPC</a> </div>
 
                 <!-- BOTÃO (pra ficar 3D é só adicionar = border-b-4)-->
                 <button
                     class="px-4 py-5 text-xl font-bold text-white transition duration-200 bg-purple-600 bg-opacity-50 border-b-4 border-purple-300 rounded shadow-lg cursor-not-allowed md:col-span-2 "
                     type="submit" id="continuar" disabled>Continuar</button>
-            </form>
-        </section>
-        </section>
-        </main>
+            </div>
+
+        </form>
+    </div>
+    </div>
+    </section>
+    </section>
+    </main>
     </div>
     <div class="relative -mt-20 ">
         <section id="wave" class="">
@@ -137,4 +550,5 @@
     </div>
     <script src="../src/assets/js/cadastro.js"></script>
 </body>
+
 </html>
