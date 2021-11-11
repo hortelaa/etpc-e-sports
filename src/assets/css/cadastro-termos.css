@@ -259,8 +259,8 @@ h1 {
 }
 
 .highlight:hover:before {
-    left: 715px;
-    transition: all 0.7s;
+    left: 1045px;
+    transition: all 1.0s;
 }
 .borda-escura{
     border-bottom-color: rgb(34, 180, 193);

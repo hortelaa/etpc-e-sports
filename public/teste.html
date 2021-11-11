@@ -16,27 +16,34 @@
   </style>
 </head>
 <body>
-<!-- component -->
-<html>
-   <head>
-      <!-- JIT SUPPORT, for using peer-* below -->
-      <script src="https://unpkg.com/tailwindcss-jit-cdn"></script>
-   </head>
-   <body>
-<div>
-  
-<label class="block text-center" style="max-width: 200px">
-  <select class="block w-full mt-1 font-semibold text-md form-select focus:outline-none font-denis">
-    <option>Jogador 1</option>
-    <option>Jogador 2</option>
-    <option>Jogador 3</option>
-    <option>Jogador 4</option>
-    <option>Jogador 5</option>
-  </select>
-</label>
+
+<div id="pdf-modal" class="modal-body">
+    <div style="text-align: center;">
+        <object class="pdf" data='someInfo.pdf'
+                type='application/pdf'
+                style="background: #999; height: 1000px;">
+        </object>
+
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align: right;">
+        <button id="closeButton" class="button button-blue" data-ng-click="closeThisDialog(true)" disabled>
+        click to close
+        </button>
+    </div>
 </div>
 </body>
 </html>
-
+<script>
+  var pdf = document.querySelectorAll('.pdf')
+  document.addEventListener('scroll',function(){
+      var agreementTextElement = document.getElementById('uniqueTCid')
+      if (document.body.scrollTop >= pdf[0].offsetHeight - window.innerHeight){
+          console.log('remove disabled attribute from button')
+          document.getElementById('closeButton').removeAttribute('disabled')
+      }
+    })
+  </script>
 </body>
 </html>

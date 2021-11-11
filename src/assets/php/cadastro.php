@@ -1,16 +1,14 @@
 <?php
 //<=======================================DADOS============================================>
-$email = array($_POST['email'], $_POST['email2'],$_POST['email3'], $_POST['email4'],$_POST['email5']);
-$telefone = array($_POST['telefone'], $_POST['telefone2'],$_POST['telefone3'], $_POST['telefone4'],$_POST['telefone5']);
+$email = array($_POST['email'], $_POST['email2'],$_POST['email3'], $_POST['email4'],$_POST['email5'],$_POST['email-reserva']);
+$telefone = array($_POST['telefone'], $_POST['telefone2'],$_POST['telefone3'], $_POST['telefone4'],$_POST['telefone5'],$_POST['telefone-reserva']);
 $equipe = $_POST['equipe'];
-$matricula = array($_POST['matricula'],$_POST['matricula2'],$_POST['matricula3'],$_POST['matricula4'],$_POST['matricula5']);
-$nome = array($_POST['nome'],$_POST['nome2'],$_POST['nome3'],$_POST['nome4'],$_POST['nome5']);
-$turma_e_curso = array($_POST['turma-e-curso'],$_POST['turma-e-curso2'],$_POST['turma-e-curso3'],$_POST['turma-e-curso4'],$_POST['turma-e-curso5']);
-$nick = array($_POST['nick-dos-integrantes-da-equipe'],$_POST['nick-dos-integrantes-da-equipe2'],$_POST['nick-dos-integrantes-da-equipe3'],$_POST['nick-dos-integrantes-da-equipe4'],$_POST['nick-dos-integrantes-da-equipe5']);
-print_r($telefone);
-
-
+$matricula = array($_POST['matricula'],$_POST['matricula2'],$_POST['matricula3'],$_POST['matricula4'],$_POST['matricula5'],$_POST['matricula-reserva']);
+$nome = array($_POST['nome'],$_POST['nome2'],$_POST['nome3'],$_POST['nome4'],$_POST['nome5'],$_POST['nome-reserva']);
+$turma_e_curso = array($_POST['turma-e-curso'],$_POST['turma-e-curso2'],$_POST['turma-e-curso3'],$_POST['turma-e-curso4'],$_POST['turma-e-curso5'],$_POST['turma-e-curso-reserva']);
+$nick = array($_POST['nick-dos-integrantes-da-equipe'],$_POST['nick-dos-integrantes-da-equipe2'],$_POST['nick-dos-integrantes-da-equipe3'],$_POST['nick-dos-integrantes-da-equipe4'],$_POST['nick-dos-integrantes-da-equipe5'],$_POST['nick-dos-integrantes-da-equipe-reserva']);
 $count = 0;
+
 //<===========================CONEXÃO-COM-BANCO-DE-DADOS================================>
 $conexao = new mysqli('localhost','root','','etpc-esports');
 
@@ -23,7 +21,7 @@ for ($i=0; $i < count($email); $i++) {
     }
 }
 
-if ($count == 5){
+if ($count == 5 || $count == 6){
     echo "<meta http-equiv='refresh' content='0;URL=../../../public/cadastro-termos.html'>";
     mysqli_close($conexao);
 }else{

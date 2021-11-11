@@ -4,12 +4,20 @@ var equipe = $(".equipe");
 var limite = $('#limite');
 var maxLength = 16;
 
+$('#preencher').click(function() {
+    $(input).each(function () {
+        $(input).val('aaaaaaa@gaaa');
+    });
+}); 
+
 $(document).ready(function(){
     $('#jogador1').removeClass('hidden');
     $('#jogador2').addClass('hidden');
     $('#jogador3').addClass('hidden');
     $('#jogador4').addClass('hidden');
     $('#jogador5').addClass('hidden');
+    $('#reserva').addClass('hidden');
+
 });
 
 $('#choice').change(function(){
@@ -21,6 +29,8 @@ $('#choice').change(function(){
         $('#jogador3').addClass('hidden');
         $('#jogador4').addClass('hidden');
         $('#jogador5').addClass('hidden');
+        $('#reserva').addClass('hidden');
+
     }
     if(selected_item == "2"){
         $('#jogador1').addClass('hidden');
@@ -28,6 +38,8 @@ $('#choice').change(function(){
         $('#jogador3').addClass('hidden');
         $('#jogador4').addClass('hidden');
         $('#jogador5').addClass('hidden');
+        $('#reserva').addClass('hidden');
+
     }
     if(selected_item == "3"){
         $('#jogador1').addClass('hidden');
@@ -35,6 +47,8 @@ $('#choice').change(function(){
         $('#jogador3').removeClass('hidden');
         $('#jogador4').addClass('hidden');
         $('#jogador5').addClass('hidden');
+        $('#reserva').addClass('hidden');
+
     }
     if(selected_item == "4"){
         $('#jogador1').addClass('hidden');
@@ -42,6 +56,8 @@ $('#choice').change(function(){
         $('#jogador3').addClass('hidden');
         $('#jogador4').removeClass('hidden');
         $('#jogador5').addClass('hidden');
+        $('#reserva').addClass('hidden');
+
     }
     if(selected_item == "5"){
         $('#jogador1').addClass('hidden');
@@ -49,6 +65,15 @@ $('#choice').change(function(){
         $('#jogador3').addClass('hidden');
         $('#jogador4').addClass('hidden');
         $('#jogador5').removeClass('hidden');
+        $('#reserva').addClass('hidden');
+    }
+    if(selected_item == "6"){
+        $('#jogador1').addClass('hidden');
+        $('#jogador2').addClass('hidden');
+        $('#jogador3').addClass('hidden');
+        $('#jogador4').addClass('hidden');
+        $('#jogador5').addClass('hidden');
+        $('#reserva').removeClass('hidden');
     }
 });
 
