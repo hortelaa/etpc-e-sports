@@ -1,4 +1,5 @@
  /** Se colocar MAIN no lugar do BODY ele vai ficar dentro da caixa branca **/
+ 
  body {
     background-image: url('../imgs/fundoindexblack.jpg');
     background-size: 100%;
@@ -270,3 +271,29 @@ h1 {
     border-bottom-color: #a7e9ef;
 }
 
+a {
+    color:#00b6ca;
+    text-decoration: none;
+    padding-bottom: 2px;
+    display: inline-block;
+    position: relative;
+  }
+
+a:hover:after {
+    width:100%;
+    right: 0;
+  }
+  a:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 0;
+    position: absolute;
+    background: #00b6ca;
+    transition: width 1s ease 0s, right 0.5s ease 0s;
+    width: 0;
+  }
+ 
+ 
