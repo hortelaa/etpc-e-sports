@@ -10,7 +10,7 @@ $nick = array($_POST['nick-dos-integrantes-da-equipe'],$_POST['nick-dos-integran
 $count = 0;
 
 //<===========================CONEXÃO-COM-BANCO-DE-DADOS================================>
-$conexao = new mysqli('localhost','root','','etpc-esports');
+$conexao = new mysqli('localhost','root','','etpc_esports');
 
 for ($i=0; $i < count($email); $i++) {
     $query = "INSERT INTO registro (email, telefone, equipe, matricula, nome, turma_e_curso, nick)";

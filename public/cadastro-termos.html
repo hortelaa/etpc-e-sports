@@ -10,8 +10,80 @@
     <link rel="stylesheet" href="../src/assets/css/cadastro-termos.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../src/assets/js/pdf.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@tailwindcss/custom-forms@0.2.1/dist/custom-forms.css"rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+</head>
 </head>
 <body>
+<div id="dialog" title="Dialog Title">
+    
+  <div class="fixed z-10 inset-0 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+      <!--
+        Background overlay, show/hide based on modal state.
+  
+        Entering: "ease-out duration-300"
+          From: "opacity-0"
+          To: "opacity-100"
+        Leaving: "ease-in duration-200"
+          From: "opacity-100"
+          To: "opacity-0"
+      -->
+      <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+  
+      <!-- This element is to trick the browser into centering the modal contents. -->
+      <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+  
+      <!--
+        Modal panel, show/hide based on modal state.
+  
+        Entering: "ease-out duration-300"
+          From: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+          To: "opacity-100 translate-y-0 sm:scale-100"
+        Leaving: "ease-in duration-200"
+          From: "opacity-100 translate-y-0 sm:scale-100"
+          To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+      -->
+      <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+        <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+          <div class="sm:flex sm:items-start">
+            <div class="mx-auto flex-shrink-0 flex items-center justify-center h-8 w-16 rounded-full bg-etpc-azuldark sm:mx-0 sm:h-10 sm:w-10">
+              <!-- Heroicon name: outline/exclamation -->
+              <img src="../src/assets/imgs/logoazuletpc.png" class="w-16 h-8" alt="">
+            </div>
+            <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+              <h3 class="text-lg leading-6 font-md font-bold text-gray-900 pb-4 font-denis" id="modal-title">
+                Política de privacidade para o site:
+              </h3>
+              <div class="mt-2">
+                <p class="text-md text-gray-700">
+                  <span class="font-bold pt-4 font-denis">Política de Privacidade:</span>
+                  <br> 
+                  <p class="font-denis pt-4">Para assegurar sua transparência e atualização, o E-Sports ETPC VR e a Fundação CSN poderão alterar esta Política, a qualquer tempo. O documento poderá ser acessado a qualquer momento neste endereço.</p>
+                  <br>
+                <span class="font-bold mt-4 font-denis">Cookies:</span>
+                  <br> 
+                  <p class="font-denis pt-4">O “Cookie” é um arquivo que será lido pelo site E-Sports ETPC VR toda vez que você o acessar. É um arquivo que o identifica com o objetivo de otimizar a sua experiência de navegação. Esse arquivo fica armazenado em seu computador e é ativado cada vez que a página que o gerou for acessada. Quando você entrar no site, será dada a permissão automática para o uso de todas as áreas do site a que você tem direito. Você tem a possibilidade de não aceitar esses “cookies”. Para tanto, basta desabilitá-los em seu navegador. Configure seu computador para rejeitar automaticamente os cookies ou informar a cada arquivo recebido. As informações referentes a esta configuração estão disponíveis nos manuais e instruções do seu próprio navegador. Sua experiência de navegação poderá ser prejudicada.</p>
+                </p>
+                <br>
+                <span class="font-bold mt-4 font-denis">E-mail:</span>
+                  <br> 
+                  <p class="font-denis pt-4">Utilizaremos o seu e-mail para enviar as novidades e informações sobre o E-Spots ETPC VR, a ETPC e a Fundação CSN e seus parceiros neste edital. Não enviamos nenhum e-mail não-solicitado e caso você os esteja recebendo de maneira indesejada, solicitamos que utilize a ferramenta de cadastramento disponibilizada em todos os envios de e-mail. Ao submeter seu e-mail e dados pessoais você estará consentido com o tratamento desses dados para essas finalidades e declara-se ciente a sobre incidência da legislação vigente aplicável, incluindo, mas não se limitando a Lei nº 12.965, de 23 de abril de 2014 e o Decreto nº 8.771, de 11 de maio de 2016 (“Marco Civil da Internet”) e a Lei nº 13.709, de 14 de agosto de 2018 (“Lei Geral de Proteção de Dados” ou “LGPD”), no que couber e conforme aplicável.</p>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+          
+          <button id="CloseDialog" type="button" class="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-etpc-azulight sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">
+            Sair
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
     <div class="fixed z-0 min-w-full min-h-full bg-etpc-azulight opacity-10"></div>
     <div class=" body-bg md:pt-20 md:px-0">
 
@@ -22,7 +94,7 @@
 
         <!-- WHITE BOX -->
         <div class="relative flex items-center justify-center" id="rolagem">
-            <main class="w-7/12 p-8 mx-auto my-10 bg-white rounded-lg shadow-2xl">
+            <main class="w-screen lg:w-8/12 p-8 mx-auto mt-4 bg-white rounded-lg shadow-2xl">
                 <!-- TEXTO -->
                 <section>
                     <h3 class="text-2xl font-bold text-center ">Leia o regulamento</h3>
@@ -35,47 +107,47 @@
 
                 <!-- Barra de rolagem -->
                 <div class="barra-de-rolagem"></div>
-                <section class="text-justify justify-start h-60" id="overflow">
-
+                <section class="text-justify justify-start h-60 border-etpc-azulight border-solid border-2 rounded" id="overflow">
+                    <div class="m-4">
                     <!-- REGULAMENTO -->
                     <p class="font-bold">REGULAMENTO – CAMP DA ETPC</p>
                     
 
                         
                         <p>O regulamento a seguir foi elaborado pela comissão organizadora do evento com objetivo de deixar os participantes cientes de todas as regras e condições do campeonato. </p>
-                        
+                        <br>
                         <p class="font-bold">CONSIDERAÇÕES INICIAIS</p>
                         
                         <p>•	No ato da inscrição o/a participante reconhece e aceita os termos deste regulamento. </p>
                         
-                        <p>•	Para que a equipe seja cadastrada, terá que ter pelo menos 1 membro (aluno ou aluna) interno da ETPC, na equipe principal ou na reserva, com total conhecimento do evento.</p>
+                        <p>•	<span class="font-bold">Para que a equipe seja cadastrada, terá que ter pelo menos 1 membro (aluno ou aluna) interno da ETPC</span>, na equipe principal ou na reserva, com total conhecimento do evento.</p>
                         
-                        <p>•	As inscrições serão realizadas através do nosso site <a href="www.esportsetpcvr.com.br">(www.esportsetpcvr.com.br)</a>.</p>
+                        <p>•	As inscrições serão realizadas através do nosso <span class="font-bold">site</span> <a href="www.esportsetpcvr.com.br">(www.esportsetpcvr.com.br)</a>.</p>
                         
-                        <p>•	Os participantes NÃO poderão usar qualquer tipo de linguagem que contenha palavras obscenas, difamatórias, machistas, homofóbicas, transfóbicas, vulgares, libidinosas, racistas e/ou ofensivas com o próximo ou de cunho político ou religioso. Todos os participantes deverão agir com respeito e educação diante e para com dos demais envolvidos. O descumprimento dessa regra poderá acarretar na desclassificação da equipe na competição.</p>
+                        <p>•	Os participantes <span class="font-bold">NÃO</span> poderão usar qualquer tipo de linguagem que contenha palavras obscenas, difamatórias, machistas, homofóbicas, transfóbicas, vulgares, libidinosas, racistas e/ou ofensivas com o próximo ou de cunho político ou religioso. <span class="font-bold">Todos os participantes deverão agir com respeito e educação diante e para com dos demais envolvidos.</span> O descumprimento dessa regra poderá acarretar na desclassificação da equipe na competição.</p>
                         
-                        <p>•	Todas as equipes terão 10 minutos de tolerância em ocorrência de atraso. Caso a equipe ultrapasse o tempo limite, será desclassificada. </p>
+                        <p>•	Todas as equipes terão <span class="font-bold">10 minutos de tolerância</span> em ocorrência de <span class="font-bold">atraso</span>. Caso a equipe ultrapasse o tempo limite, <span class="font-bold">será desclassificada.</span> </p>
                         
-                        <p>•	Está permitido o uso do PAUSE com tempo máximo de 15 minutos por equipe. </p>
+                        <p>•	Está permitido o uso do <span class="font-bold">PAUSE</span> com <span class="font-bold">tempo máximo</span> de 15 minutos por equipe. </p>
                         
-                        <p>•	A Comissão Organizadora possui autonomia para solicitar alteração de nomes de jogadores/as e equipes com conotação pejorativa, ofensiva, vexatória, preconceituosa ou que façam apologia a crimes de ódio, dentre outros desta natureza. Em caso de reincidência, a comissão organizadora poderá desclassificar as equipes que descumprirem este regulamento. </p>
+                        <p>•	<span class="font-bold">A Comissão Organizadora possui autonomia para solicitar alteração de nomes de jogadores/as e equipes com conotação pejorativa, ofensiva, vexatória, preconceituosa ou que façam apologia a crimes de ódio</span>, dentre outros desta natureza. Em caso de reincidência, a comissão organizadora poderá desclassificar as equipes que descumprirem este regulamento. </p>
                         
-                        
+                        <br>
                         <p class="font-bold">COMISSÃO ORGANIZADORA:</p>
                          
-                        <p>•	Rondinelly - Professor e coordenador do curso de informática</p>
-                        <p>•	Denilson Felix Conceição – Ex-aluno do curso técnico de informática</p>
-                        <p>•	João Victor Silveira Domingues – Ex-aluno do curso técnico de informática</p>
-                        <p>•	José Miguel Bandeira de Novaes – Ex-aluno do curso técnico de informática</p>
-                        <p>•	Lucas de Oliveira Vieira Cardoso – Ex-aluno do curso técnico de informática</p>
-                        <p>•	Gabriel Espilari – Ex-Aluno da ETPC </p>
-                        <p>•	Rafael Pereira – Ex-Aluno da ETPC</p>
-                        <p>•	Vinícius Assunção – Ex-Aluno da ETPC</p>
+                        <p>•	<span class="underline">Rondinelly</span> - Professor e coordenador do curso de informática</p>
+                        <p>•	<span class="underline">Denilson Felix Conceição</span> – Ex-aluno do curso técnico de informática</p>
+                        <p>•	<span class="underline">João Victor Silveira Domingues</span> – Ex-aluno do curso técnico de informática</p>
+                        <p>•	<span class="underline">José Miguel Bandeira de Novaes</span> – Ex-aluno do curso técnico de informática</p>
+                        <p>•	<span class="underline">Lucas de Oliveira Vieira Cardoso</span> – Ex-aluno do curso técnico de informática</p>
+                        <p>•	<span class="underline">Gabriel Espilari</span> – Ex-Aluno da ETPC </p>
+                        <p>•	<span class="underline">Rafael Pereira</span> – Ex-Aluno da ETPC</p>
+                        <p>•	<span class="underline">Vinícius Assunção</span> – Ex-Aluno da ETPC</p>
                          
                         <p>A Comissão Organizadora tem a função de organizar o campeonato, as inscrições e o chaveamento das equipes. Também é função da comissão zelar pelo cumprimento deste regulamento. </p>
-                         
-                        <p>Dúvidas poderão ser encaminhadas pelo servidor oficial de Discord do Campeonato (<a href="https://bit.ly/DiscordCampETPC">https://bit.ly/DiscordCampETPC</a>). Qualquer mudança na equipe terá que ser avisada a Comissão Organizadora pelo Discord o mais rápido possível.</p>
-                         
+                        <br>
+                        <p><span class="font-bold">Dúvidas poderão ser encaminhadas pelo servidor oficial de Discord do Campeonato (<a href="https://bit.ly/DiscordCampETPC">https://bit.ly/DiscordCampETPC</a>). Qualquer mudança na equipe terá que ser avisada a Comissão Organizadora pelo Discord o mais rápido possível.</span></span></p>
+                        <br>
                         <p class="font-bold">INSCRIÇÕES:</p>
                         <p>•	O período de inscrição se inicia no dia <span class="font-bold">12/11/2021</span> e se encerra no dia <span class="font-bold">26/11/2021</span>;</p>
                         <p>•	A inscrição será realizada através do site oficial do campeonato <a href="www.esportsetpcvr.com.br">www.esportsetpcvr.com.br</a>;</p>
@@ -86,16 +158,16 @@
                         <p>•	Ao se inscrever no evento, o participante: declara que conhece o regulamento do torneio e concorda com o tal, além de se responsabilizar pela veracidade dos dados fornecidos;</p>
                         <p>•	Os dados coletados pelo E-Sports ETPC VR no formulário de inscrição serão utilizados apenas para fins estatísticos, bem como para inclusão em nosso banco de e-mails interno e pela plataforma de NewsLetter Mailee, para que você seja notificado de assuntos relacionados às iniciativas e unidades da Fundação CSN, incluindo a ETPC. Ao preencher o formulário você concorda com esses termos.</p>
                         
-                        
+                        <br>
                         <p class="font-bold">CARACTERÍSTICAS GERAIS DO TORNEIO:</p>
                         
                         <p>As partidas irão acontecer no mapa Summoner’s Rift, no modo de Alternada Torneio, com máximo de 5 jogadores. As equipes, em todas as fases do torneio, deverão entrar na sala personalizada através do código disponibilizado pelos administradores através do servidor do Discord do Campeonato.</p>
                         
-                        
+                        <br>
                         <p class="font-bold">CATEGORIAS</p>
                         <p>Serão 2 categorias no campeonato:</p>
-                        <p>Categoria A: até ELO 4</p>
-                        <p>Categoria B: ELO 5 em diante</p>
+                        <p class="font-bold">Categoria A: até ELO 4</p>
+                        <p class="font-bold">Categoria B: ELO 5 em diante</p>
                         <p>A organização do CAMP DA ETPC realizará um balanceamento no nível de ELOS dos participantes a partir dos dados fornecidos na inscrição para identificar a categoria em que a equipe estará enquadrada. O balanceamento será determinado pela pontuação abaixo:</p>
                         <p>1. Ferro: 0,5 ponto</p>
                         <p>2. Bronze: 1 pontos</p>
@@ -107,61 +179,69 @@
                         <p>8. Grão-mestre: 6,5 pontos</p>
                         <p>9. Desafiante: 7 pontos </p>
 
+                        <br>
                         <p class="font-bold">CHAVEAMENTO</p>
-                        <p>O sistema de chaveamento será determinado após as inscrições, pois dependerá do número de inscritos. O chaveamento será disponibilizado diretamente no site (www.esportsetpcvr.com.br)</p>
-                        
+                        <p>O sistema de chaveamento será determinado após as inscrições, pois <span class="font-bold">dependerá do número de inscritos.</span> O chaveamento será disponibilizado diretamente no site <a href="www.esportsetpcvr.com.br"> (www.esportsetpcvr.com.br)</a></p>
+                        <br>
                         <p class="font-bold">PREMIAÇÃO</p>
-                        <p>A premiação será APENAS EM RIOT POINTS. O time vencedor (1º lugar) será premiado com R$250,00 EM RP, sendo R$50,00 distribuídos para cada integrante da equipe, porém, apenas os 5 jogadores titulares receberão a premiação, os reservas estarão isentos;</p>
+                        <p>A premiação será <span class="font-bold">APENAS EM RIOT POINTS.</span> O time vencedor (1º lugar) será premiado com R$250,00 EM RP, sendo R$50,00 distribuídos para cada integrante da equipe, porém, <span class="font-bold">apenas os 5 jogadores titulares receberão a premiação,</span> os reservas estarão isentos;</p>
                         <p>A equipe vencedora deverá entrar em contato com os membros da Comissão Organizadora através do Discord do Campeonato para receberem prêmio.</p>
-                        
+                        <br>
                         <p class="font-bold">COMPORTAMENTO DO JOGADOR</p>
                         <p>• Os participantes não poderão usar qualquer tipo de linguagem que contenha palavras obscenas, difamatórias, machistas, homofóbicas, transfóbicas, vulgares, libidinosas, racistas e/ou ofensivas com o próximo ou de cunho político ou religioso. Todos os participantes deverão agir com respeito e educação diante e para com dos demais envolvidos;</p>
                         <p>• Caso algum membro de equipe seja flagrado postando em qualquer rede social mensagens ofensivas, preconceituosas ou que caracterize qualquer tipo de assédio aos oponentes, antes, durante e depois do CAMP DA ETPC, será desclassificado e seus membros serão banidos de eventos futuros;</p>
                         <p>• A Comissão Organizadora terá autoridade e autonomia para zelar pelo bom andamento do evento, sendo convocada sempre que necessário, para resoluções que se façam necessárias.</p>
-                        
+                        <br>
                         <p class="font-bold">TRANSMISSÃO DA PARTIDAS</p>
-                        <p>As partidas da semifinal e final (6 jogos) serão transmitidas ao vivo pelo canal do evento na Twitch <a href="https://www.twitch.tv/etpcesports">(https://www.twitch.tv/etpcesports)</a>, horário a ser divulgado posteriormente. As partidas serão gravadas e postadas no canal de Youtube oficial do campeonato. Link: <a href="https://bit.ly/CanalEsportsEtpc">https://bit.ly/CanalEsportsEtpc</a></p>
+                        <p>As partidas da semifinal e final (6 jogos) serão transmitidas ao vivo pelo canal do evento na Twitch <a href="https://www.twitch.tv/etpcesports">(https://www.twitch.tv/etpcesports)</a>, horário a ser <span class="underline">divulgado posteriormente</span>. As partidas serão gravadas e postadas no canal de Youtube oficial do campeonato. Link: <a href="https://bit.ly/CanalEsportsEtpc">https://bit.ly/CanalEsportsEtpc</a></p>
                         
-
+                        <br>
                         <p class="font-bold">CONTAS DOS JOGADORES</p>
                         <p>• Evite trocar de nick’s durante a competição, caso ocorra deixe um aviso prévio ao Comitê da Moderação, para evitar desclassificação;</p>
                         <p>• Recusaremos qualquer nome e/ou apelido que seja vulgar, ofensivo ou discriminatório.</p>
                         <p>• Os moderadores irão avaliar os apelidos e, caso necessário, o competidor deverá realizar a alteração. Caso o jogador se recuse, ele poderá ser desclassificado;</p>
                         <p>• Não é permitido o compartilhamento de contas ou a utilização de contas de terceiros não inscritas previamente para a participação no torneio.</p>
-                        
+                        <br>
                         <p class="font-bold">BUGS E TRAPAÇAS</p>
                         <p>• É proibido o uso de qualquer bug ou vantagens consideradas como forma de trapaças pela organização. Caso as regras sejam descumpridas, o jogador será imediatamente desclassificado.</p>
+                        <br>
+                        <p class="font-bold">CRONOGRAMA</p>
+                        <p>29/11/2021 Primeira Rodada dos Jogos - <span class="font-bold">10:30</span></p>
+                        <p>30/11/2021 Segunda Rodada dos Jogos - <span class="font-bold">10:30</span></p>
+                        <p>01/12/2021 Quartas de Final do Campeonato - <span class="font-bold"> 10:30</span></p>
+                        <p>02/12/2021 Semi Final do Campeonato -<span class="font-bold"> 15:30</span></p>
+                        <p>03/12/2021 Final do Campeonato - <span class="font-bold"> 16:00</span></p>
                         
-                        <p>CRONOGRAMA</p>
-                        29/11/2021 Primeira Rodada dos Jogos 10:30
-                        30/11/2021 Segunda Rodada dos
-                        Jogos
-                        10:30
-                        01/12/2021 Quartas de Final do
-                        Campeonato 10:30
-                        02/12/2021 Semi Final do
-                        Campeonato
-                        15:30
-                        03/12/2021 Final do
-                        Campeonato
-                        16:00
-                        O cronograma final pode sofrer alterações.
-                        
-                        
+                        <br>
                         <p class="font-thin">O cronograma final pode sofrer alterações.</p>
+                    </div>
                 </section>
 
 
-
+                <div class="block  mt-4 pl-4">
+                    <div class="mt-2">
+                      <div>
+                        <label class="inline-flex items-center">
+                          <input type="checkbox" id="checkbox" class="form-checkbox text-etpc-azulight w-32"/>
+                          <span id="dialog" class="ml-2 font-denis text-md">Eu aceito os termos e condições de
+                            <a id="OpenDialog" href="#">privacidade</a></span>
+                        </label>
+                      </div>
+                       
+                    </div>
+                  </div>
+                  <!--Modal-->
+    
                 <!-- FORMULARIO -->
                 <section class="mt-10 ">
                     <div class="z-30 grid lg:gap-4 md:grid-cols-2 md:gap-4 lg:grid-cols-2 sm:flex-col">
 
                         <!-- BOTÃO (pra ficar 3D é só adicionar = border-b-4)-->
 
+                        
                         <button
                             class="px-4 py-5 text-xl font-bold text-white transition duration-200 border-b-4 rounded shadow-lg cursor-not-allowed borda-clara bg-opacity-40 bg-etpc-azulight md:col-span-2 "
-                            type="submit" id="continuar" disabled>Aceitar</button>
+                            type="submit" id="aceitar" disabled>Aceitar</button>
                         </form>
                 </section>
             </main>
@@ -174,10 +254,10 @@
 
                 <!-- Olá marcio valim, eu sabia que você viria aqui -->
 
-                <div class="absolute inset-0 md:inset-20 lg:inset-44 wave wave1"></div>
-                <div class="absolute inset-0 md:inset-20 lg:inset-44 wave wave2"></div>
-                <div class="absolute inset-0 md:inset-20 lg:inset-44 wave wave3"></div>
-                <div class="absolute inset-0 md:inset-20 lg:inset-44 wave wave4"></div>
+                <div class="absolute inset-16 md:inset-12 lg:inset-52 wave wave1"></div>
+                <div class="absolute inset-16 md:inset-12 lg:inset-52 wave wave2"></div>
+                <div class="absolute inset-16 md:inset-12 lg:inset-52 wave wave3"></div>
+                <div class="absolute inset-16 sm: md:inset-12 lg:inset-52 wave wave4"></div>
             </section>
         </div>
     </div>
