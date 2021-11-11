@@ -72,17 +72,16 @@ svg {
   }
   
 
-  a {
-    color: white;
+  .a {
     text-decoration: none;
     padding-bottom: 2px;
   }
 
-a:hover:after {
+.a:hover:after {
     width:100%;
     right: 0;
   }
-  a:after {
+  .a:after {
     background: none repeat scroll 0 0 transparent;
     bottom: 0;
     content: "";

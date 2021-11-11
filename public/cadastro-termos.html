@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="../src/assets/css/cadastro-termos.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../src/assets/js/pdf.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/@tailwindcss/custom-forms@0.2.1/dist/custom-forms.css"rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 </head>
 </head>
@@ -36,7 +35,6 @@
   
       <!--
         Modal panel, show/hide based on modal state.
-  
         Entering: "ease-out duration-300"
           From: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
           To: "opacity-100 translate-y-0 sm:scale-100"
@@ -75,7 +73,6 @@
           </div>
         </div>
         <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
-          
           <button id="CloseDialog" type="button" class="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-etpc-azulight sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">
             Sair
           </button>
@@ -98,16 +95,13 @@
                 <!-- TEXTO -->
                 <section>
                     <h3 class="text-2xl font-bold text-center ">Leia o regulamento</h3>
-                    <p class="pt-2 mb-10 font-thin text-center text-gray-600 ">Ao clicar em aceitar você concorda com os
-                        termos e
-                        condições
-                        abaixo.</p>
+                    <p class="pt-2 mb-10 font-thin text-center text-gray-600 ">Ao clicar em aceitar você concorda com os termos e condições abaixo.</p>
                 </section>
 
 
                 <!-- Barra de rolagem -->
                 <div class="barra-de-rolagem"></div>
-                <section class="text-justify justify-start h-60 border-etpc-azulight border-solid border-2 rounded" id="overflow">
+                <section class="text-justify justify-start h-60 bg-gray-100 border-etpc-azulight border-solid border-2 rounded" id="overflow">
                     <div class="m-4">
                     <!-- REGULAMENTO -->
                     <p class="font-bold">REGULAMENTO – CAMP DA ETPC</p>
@@ -222,7 +216,7 @@
                     <div class="mt-2">
                       <div>
                         <label class="inline-flex items-center">
-                          <input type="checkbox" id="checkbox" class="form-checkbox text-etpc-azulight w-32"/>
+                          <input type="checkbox" id="checkbox" class="form-checkbox w-4 h-4 text-etpc-azulight"/>
                           <span id="dialog" class="ml-2 font-denis text-md">Eu aceito os termos e condições de
                             <a id="OpenDialog" href="#">privacidade</a></span>
                         </label>
@@ -247,13 +241,9 @@
             </main>
         </div>
 
-
         <!-- ONDAS -->
         <div class="relative -mt-20 ">
             <section id="wave" class="">
-
-                <!-- Olá marcio valim, eu sabia que você viria aqui -->
-
                 <div class="absolute inset-16 md:inset-12 lg:inset-52 wave wave1"></div>
                 <div class="absolute inset-16 md:inset-12 lg:inset-52 wave wave2"></div>
                 <div class="absolute inset-16 md:inset-12 lg:inset-52 wave wave3"></div>

@@ -4,11 +4,7 @@ var equipe = $(".equipe");
 var limite = $('#limite');
 var maxLength = 16;
 
-$('#preencher').click(function() {
-    $(input).each(function () {
-        $(input).val('aaaaaaa@gaaa');
-    });
-}); 
+
 
 $(document).ready(function(){
     $('#jogador1').removeClass('hidden');
