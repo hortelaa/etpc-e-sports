@@ -1,10 +1,10 @@
 body {
   background-image: url('../imgs/fundoindexblack.jpg');
-  background-size: 100%;
-    background-repeat: repeat-y;
-    background-attachment: fixed;
-    height: 100%;
-    width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
+  width: 100%;
 }
 svg {
     width: 250px;

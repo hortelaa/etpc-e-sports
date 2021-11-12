@@ -2,12 +2,21 @@
  
  body {
     background-image: url('../imgs/fundoindexblack.jpg');
-    background-size: 100%;
-    background-repeat: repeat-y;
+    background-size: cover;
+    background-repeat: no-repeat;
     background-attachment: fixed;
     height: 100%;
     width: 100%;
 }
+
+html { 
+    background: url('../imgs/fundoindexblack.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
 
 section .wave {
     position: absolute;
@@ -71,7 +80,7 @@ section .wave.wave4 {
     }
 }
 
-.neonText {
+h1 {
     color: #fff;
     text-shadow:
         0 0 7px #fff,
@@ -84,38 +93,8 @@ section .wave.wave4 {
         0 0 151px #00b6ca;
 }
 
-h1 {
-    animation: flicker 1.5s infinite alternate;
-}
 
-@keyframes flicker {
 
-    0%,
-    18%,
-    22%,
-    25%,
-    53%,
-    57%,
-    100% {
-
-        text-shadow:
-            0 0 4px #fff,
-            0 0 11px #fff,
-            0 0 19px #fff,
-            0 0 40px #00b6ca,
-            0 0 80px #00b6ca,
-            0 0 90px #00b6ca,
-            0 0 100px #00b6ca,
-            0 0 150px #00b6ca;
-
-    }
-
-    20%,
-    24%,
-    55% {
-        text-shadow: none;
-    }
-}
 /*
 <---BARRA DE SCROLL--->
 */
@@ -146,6 +125,7 @@ h1 {
         width: 10px;
         filter: blur(30px);
         animation: animate3 5s linear infinite;
+        height: 150px;
 
     }
 
@@ -153,6 +133,7 @@ h1 {
         background: transparent;
         animation: animate3 5s linear infinite;
         background: linear-gradient(to top, #008aff, #00ffe7);
+        height: 150px;
 
 
 
@@ -162,6 +143,7 @@ h1 {
         background: linear-gradient(to top, #008aff, #00ffe7);
         animation: animate3 5s linear infinite;
         filter: blur(30px);
+        height: 150px;
 
 
     }
@@ -170,6 +152,7 @@ h1 {
         background: linear-gradient(to top, #008aff, #00ffe7);
         animation: animate3 5s linear infinite;
         filter: blur(30px);
+        height: 150px;
 
 
     }
@@ -178,6 +161,7 @@ h1 {
         background: linear-gradient(to top, #008aff, #00ffe7);
         animation: animate3 5s linear infinite;
         filter: blur(10px);
+        height: 150px;
 
 
     }
@@ -186,6 +170,7 @@ h1 {
         background: linear-gradient(to top, #008aff, #00ffe7);
         filter: blur(30px);
         animation: animate3 5s linear infinite;
+        height: 150px;
 
 
 
@@ -195,9 +180,78 @@ h1 {
         background: linear-gradient(to top, #008aff, #00ffe7);
         animation: animate3 5s linear infinite;
         filter: blur(10px);
+        height: 150px;
 
 
     }
+
+
+
+      /** BARRA BACKUP**/
+      #overflow::-moz-scrollbar {
+        width: 10px;
+        filter: blur(30px);
+        animation: animate3 5s linear infinite;
+        height: 150px;
+
+    }
+
+    #overflow::-moz-scrollbar * {
+        background: transparent;
+        animation: animate3 5s linear infinite;
+        background: linear-gradient(to top, #008aff, #00ffe7);
+        height: 150px;
+
+
+
+    }
+
+    #overflow::-moz-scrollbar-thumb {
+        background: linear-gradient(to top, #008aff, #00ffe7);
+        animation: animate3 5s linear infinite;
+        filter: blur(30px);
+        height: 150px;
+
+
+    }
+
+    #overflow::-moz-scrollbar-thumb::after {
+        background: linear-gradient(to top, #008aff, #00ffe7);
+        animation: animate3 5s linear infinite;
+        filter: blur(30px);
+        height: 150px;
+
+
+    }
+
+    #overflow::-moz-scrollbar-thumb::before {
+        background: linear-gradient(to top, #008aff, #00ffe7);
+        animation: animate3 5s linear infinite;
+        filter: blur(10px);
+        height: 150px;
+
+
+    }
+
+    #overflow::-moz-scrollbar::after {
+        background: linear-gradient(to top, #008aff, #00ffe7);
+        filter: blur(30px);
+        animation: animate3 5s linear infinite;
+        height: 150px;
+
+
+
+    }
+
+    #overflow::-moz-scrollbar::before {
+        background: linear-gradient(to top, #008aff, #00ffe7);
+        animation: animate3 5s linear infinite;
+        filter: blur(10px);
+        height: 150px;
+
+
+    }
+
 
     /* FIM DA BARRA BACKUP */
     
