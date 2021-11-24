@@ -84,9 +84,9 @@ equipe.keyup(function() {
 });
 
 //Verificando o preenchimento de cada input
-$(input).keyup(function () {
+$('.input').keyup(function () {
     var empty = false;
-    $(input).each(function () {
+    $('.input').each(function () {
         if ($(this).val() == '' || $(this).val() == null || $(this).val().length == 0) {
             empty = true;
         }

@@ -3,19 +3,10 @@
  body {
     background-image: url('../imgs/fundoindexblack.jpg');
     background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     height: 100%;
     width: 100%;
 }
 
-html { 
-    background: url('../imgs/fundoindexblack.jpg') no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
 
 
 section .wave {
