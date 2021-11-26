@@ -1,11 +1,13 @@
 
-/* Google Fonts */
-@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
-
+html { 
+  background: url('../imgs/fundoindexblack.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
 body {
-  background-image: url('../imgs/fundoindexblack.jpg');
-  background-size: cover;
   overflow-y: hidden;
   height: 100%;
   width: 100%;
@@ -26,11 +28,26 @@ svg {
     top: 50%;  
     width: 24em;
     margin: 0 auto;
+    text-align: center;
+    justify-items: center;
     border-right: 2px solid rgba(255,255,255,.75);
-    font-size: 180%;
     white-space: nowrap;
     overflow: hidden;
     transform: translateY(-50%);    
+}
+
+/* GAMBIARRA */
+@media screen and (min-width: 601px) {
+  .line-1 {
+    font-size: 2vw;
+  }
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+  .line-1{
+    font-size: 5vw;
+  }
 }
 
 /* Animation */
