@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ETPC-ESPORTS</title>
+    <link rel="icon" href="../src/assets/imgs/iconebranco.png">
+    <link rel="stylesheet" href="dist/styles.css" />
+    <link rel="stylesheet" href="../src/assets/css/sobre.css" />
+    <link rel="stylesheet" href="../src/assets/css/cadastro-final.css" />
+    <script src="https://kit.fontawesome.com/c3dccf6540.js" crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <div class="max-w-4xl mx-auto mt-8 z-10">
+        <div class="text-center text-4xl">LET'S COUNTDOWN TO NEW YEAR</div>
+  
+        <div class="mt-14 flex items-center justify-between">
+          <div class="flex items-center mr-7 flex-col flex-nowrap">
+            <span
+              class="time-elem relative w-36 h-32 shadow-xl flex items-center justify-center mb-5 rounded-lg text-6xl"
+              id="days"
+            >
+              <span class="top">00</span>
+              <span class="top-back">
+                <span>00</span>
+              </span>
+              <span class="bottom">08</span>
+              <span class="bottom-back">
+                <span>00</span>
+              </span>
+            </span>
+            <span class="title">Days</span>
+          </div>
+  
+          <div class="flex items-center mr-7 flex-col flex-nowrap">
+            <span
+              class="time-elem relative w-36 h-32 shadow-xl flex items-center justify-center mb-5 rounded-lg text-6xl"
+              id="hours"
+            >
+              <!-- <span class="top">00</span>
+              <span class="top-back">
+                <span>00</span>
+              </span>
+              <span class="bottom">08</span>
+              <span class="bottom-back">
+                <span>00</span>
+              </span> -->
+            </span>
+            <span class="title">Hours</span>
+          </div>
+  
+          <div class="flex items-center mr-7 flex-col flex-nowrap">
+            <span
+              class="time-elem relative w-36 h-32 shadow-xl flex items-center justify-center mb-5 rounded-lg text-6xl"
+              id="minutes"
+            >
+              <!-- <span class="top">00</span>
+              <span class="top-back">
+                <span>00</span>
+              </span>
+              <span class="bottom">08</span>
+              <span class="bottom-back">
+                <span>00</span>
+              </span> -->
+            </span>
+            <span class="title">Minutes</span>
+          </div>
+  
+          <div class="flex items-center mr-7 flex-col flex-nowrap">
+            <span class="seconds time-elem mb-6 text-center" id="seconds">
+              <span class="top">00</span>
+              <span class="top-back">
+                <span>00</span>
+              </span>
+              <span class="bottom">00</span>
+              <span class="bottom-back">
+                <span>00</span>
+              </span>
+            </span>
+            <span class="title">Seconds</span>
+          </div>
+        </div>
+      </div>
+  
+            <!--<h1 class="relative justify-center text-2xl font-bold text-center font-denis">Acabou o prazo para as
+                inscrições ;-;</h1>-->
+           
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+<script>
+    
+
+window.addEventListener("load", () => {
+        let birthday = "2021,11,27";
+
+        (function () {
+          const second = 1000;
+          const minute = second * 60;
+          const hour = minute * 60;
+          const day = hour * 24;
+
+          const countDown = new Date(birthday).getTime();
+          x = setInterval(function () {
+            const now = new Date().getTime();
+            const distance = countDown - now;
+
+            document.getElementById("days").innerText = setNumber(
+              distance / day
+            );
+
+            document.getElementById("hours").innerText = setNumber(
+              (distance % day) / hour
+            );
+            document.getElementById("minutes").innerText = setNumber(
+              (distance % hour) / minute
+            );
+            animateFlip(seconds, Math.floor((distance % minute) / second));
+
+            //do something later when date is reached
+            if (distance < 0) {
+              let headline = document.getElementById("headline"),
+                countdown = document.getElementById("countdown"),
+                content = document.getElementById("content");
+
+              headline.innerText = "It's my birthday!";
+              countdown.style.display = "none";
+              content.style.display = "block";
+
+              clearInterval(x);
+            }
+          }, 1000);
+        })();
+
+        function animateFlip(element, value) {
+          const valueInDom = element.querySelector(".bottom-back").innerText;
+          const currentValue = value < 10 ? "0" + value : "" + value;
+
+          if (valueInDom === currentValue) return;
+
+          element.querySelector(".top-back span").innerText = currentValue;
+          element.querySelector(".bottom-back span").innerText = currentValue;
+
+          gsap.to(element.querySelector(".top"), 0.7, {
+            rotationX: "-180deg",
+            transformPerspective: 300,
+            ease: Quart.easeOut,
+            onComplete: function () {
+              element.querySelector(".top").innerText = currentValue;
+              element.querySelector(".bottom").innerText = currentValue;
+              gsap.set(element.querySelector(".top"), { rotationX: 0 });
+            },
+          });
+
+          gsap.to(element.querySelector(".top-back"), 0.7, {
+            rotationX: 0,
+            transformPerspective: 300,
+            ease: Quart.easeOut,
+            clearProps: "all",
+          });
+        }
+
+        function setNumber(num) {
+          const res = Math.floor(num);
+          return res >= 10 ? res : `0${res}`;
+        }
+      });
+</script>
+</html>

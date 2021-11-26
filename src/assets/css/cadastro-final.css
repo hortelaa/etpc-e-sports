@@ -1,7 +1,12 @@
+
+/* Google Fonts */
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+
 body {
   background-image: url('../imgs/fundoindexblack.jpg');
   background-size: cover;
-
+  overflow-y: hidden;
   height: 100%;
   width: 100%;
 }
@@ -16,79 +21,28 @@ svg {
     stroke-dasharray: 1000;
     stroke-dashoffset: 0;
   }
-.circle{
-      -webkit-animation: dash 0.9s ease-in-out;
-      animation: dash 0.9s ease-in-out;
-    }
-    .line {
-      stroke-dashoffset: 1000;
-      -webkit-animation: dash 0.9s 0.35s ease-in-out forwards;
-      animation: dash 0.9s 0.35s ease-in-out forwards;
-    }
-    .check {
-      stroke-dashoffset: -100;
-      -webkit-animation: dash-check 0.9s 0.35s ease-in-out forwards;
-      animation: dash-check 0.9s 0.35s ease-in-out forwards;
-    }
-  
-  
- 
-  
-  @-webkit-keyframes dash {
-    0% {
-      stroke-dashoffset: 1000;
-    }
-    100% {
-      stroke-dashoffset: 0;
-    }
-  }
-  
-  @keyframes dash {
-    0% {
-      stroke-dashoffset: 1000;
-    }
-    100% {
-      stroke-dashoffset: 0;
-    }
-  }
-  
-  @-webkit-keyframes dash-check {
-    0% {
-      stroke-dashoffset: -100;
-    }
-    100% {
-      stroke-dashoffset: 900;
-    }
-  }
-  
-  @keyframes dash-check {
-    0% {
-      stroke-dashoffset: -100;
-    }
-    100% {
-      stroke-dashoffset: 900;
-    }
-  }
-  
 
-  .a {
-    text-decoration: none;
-    padding-bottom: 2px;
-  }
+.line-1{
+    top: 50%;  
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 180%;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+}
 
-.a:hover:after {
-    width:100%;
-    right: 0;
-  }
-  .a:after {
-    background: none repeat scroll 0 0 transparent;
-    bottom: 0;
-    content: "";
-    display: block;
-    height: 2px;
-    left: 0;
-    background: #b15165;
-    transition: width 1s ease 0s, right 0.5s ease 0s;
-    width: 0;
-  }
-
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 18em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
