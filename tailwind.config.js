@@ -40,7 +40,7 @@ module.exports = {
       colors:{
         'camp-claro':'#510cc7',
         'camp-escuro':'#8c2cda',
-        'etpc-azuldark':"#242443",
+        'etpc-azuldark': "#242443",
         'etpc-azulight':"#00b6ca",
         'etpc-amarelo':"#edb700",
         'etpc-salmao':"#b15165", 
@@ -51,7 +51,8 @@ module.exports = {
         'fundo': "url('/src/imgs/fundocadastro.png')",
         'fundo2': "url('jhin-camile.gif')",
         'fundoindex': "url('/src/assets/imgs/fundoindex.jpg')",
-        'fundoindexblack': "url('/src/assets/imgs/fundoindexblack.jpg')",
+        'fundoindexblack': "url('/src/assets/imgs/fundoindexblack-min.webp')",
+        ,
        }
     },
   },

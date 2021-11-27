@@ -1,4 +1,4 @@
-body {font-family: 'Istok Web', sans-serif;background: url("http://picjumbo.com/wp-content/uploads/HNCK2189-1300x866.jpg") no-repeat #000;background-size: cover;min-height: 100%;margin: 0;}
+body {font-family: 'Istok Web', sans-serif;background: url('../imgs/fundoindexblack-min.webp') no-repeat #000;background-size: cover;min-height: 100%;margin: 0;}
 .hero {position:relative; text-align: center; overflow: hidden; color: #fcfcfc; }
 .hero h1 {font-family: 'Holtwood One SC', serif;font-weight: normal;font-size: 5.4em;margin:0 0 20px; text-shadow:0 0 12px rgba(0, 0, 0, 0.5);text-transform: uppercase;letter-spacing:-1px;}
 .hero p {font-family: 'Abel', sans-serif;text-transform: uppercase; color: #EDB700; letter-spacing: 6px;text-shadow:0 0 12px rgba(0, 0, 0, 0.5);font-size: 1.2em;}
@@ -36,6 +36,9 @@ body {font-family: 'Istok Web', sans-serif;background: url("http://picjumbo.com/
 .fa-trophy{
   transition-duration: 200ms;
 }
+
+
+
 
 .highlight{
   display: inline-block;
