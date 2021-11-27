@@ -1,9 +1,10 @@
    /** Se colocar MAIN no lugar do BODY ele vai ficar dentro da caixa branca **/
    body {
-    background-image: url('../imgs/fundoindexblack.jpg');
+    background-image: url('../imgs/fundoindexblack-min.webp') ; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
-    height: 100%;
-    width: 100%;
 }
 
 section .wave {

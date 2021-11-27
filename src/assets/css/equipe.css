@@ -1,12 +1,8 @@
 
-#conteudo:before {
-  content: "Joe's Task:";
-}
-
 body {
-  background-image: url('../imgs/fundoindexblack.jpg');
-  background-size: 100%;
-
-  height: 100%;
-  width: 100%;
+  background-image: url('../imgs/fundoindexblack-min.webp') ; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
