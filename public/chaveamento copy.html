@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link href='https://fonts.googleapis.com/css?family=Holtwood+One+SC' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Kaushan+Script|Herr+Von+Muellerhoff' rel='stylesheet'
+		type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Istok+Web|Roboto+Condensed:700' rel='stylesheet'
+		type='text/css'>
+	<link rel="stylesheet" href="../src/assets/css/chaveamento.css" />
+	<script src="https://kit.fontawesome.com/c3dccf6540.js" crossorigin="anonymous"></script>
+	<link rel="icon" href="../src/assets/imgs/iconeamarelo.png">
+	<link rel="stylesheet" href="dist/styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="../src/assets/js/nav.js"></script>
+	<title>ETPC E-SPORTS - Chaveamento</title>
+</head>
+
+<body>
+  <div class="fixed z-20 min-w-full min-h-full bg-black bg-opacity-20 max-w-none"></div>
+  <nav x-data="{ open: false }"
+        class="sticky top-0 z-40 bg-black shadow-lg firefox:bg-opacity-90 bg-opacity-60 backdrop-filter backdrop-blur-lg">
+        <div class="container px-6 py-4 mx-auto lg:flex lg:justify-between lg:items-center">
+            <div class="lg:flex lg:items-center">
+                <div class="flex items-center justify-between">
+
+                    <div>
+                        <span class="text-2xl font-semibold text-white"><img
+                                src="../src/assets/imgs/amarelo horizontal.png" alt="" class="w-24"></span>
+                    </div>
+
+                    <!-- Mobile menu button -->
+                    <div class="flex lg:hidden ">
+                        <button class="relative w-10 h-10 text-white focus:outline-none" @click="open = !open"
+                            onclick="toggle()">
+                            <span class="sr-only">Open main menu</span>
+                            <div
+                                class="absolute block w-5 transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2">
+                                <span aria-hidden="true"
+                                    class="block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out"
+                                    :class="{'rotate-45': open,' -translate-y-1.5': !open }"></span>
+                                <span aria-hidden="true"
+                                    class="block absolute  h-0.5 w-5 bg-current   transform transition duration-500 ease-in-out"
+                                    :class="{'opacity-0': open } "></span>
+                                <span aria-hidden="true"
+                                    class="block absolute  h-0.5 w-5 bg-current transform  transition duration-500 ease-in-out"
+                                    :class="{'-rotate-45': open, ' translate-y-1.5': !open}"></span>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <div id="mobile"
+                    class="flex flex-col hidden text-gray-600 capitalize dark:text-gray-300 lg:flex lg:px-16 lg:-mx-4 lg:flex-row lg:items-center">
+                    <a href="chaveamento.html"
+                        class="px-2 py-6 font-medium text-yellow-400 transition-colors duration-200 transform rounded md:py-2 text-md dark:text-gray-200 hover:bg-black hover:text-yellow-500 md:mx-2 hover:font-bold">Chaveamento</a>
+                    <a href="equipe.html"
+                        class="px-2 py-6 font-medium text-white transition-colors duration-200 transform rounded md:py-2 text-md dark:text-gray-200 hover:bg-black hover:text-gray-300 md:mx-2 hover:font-bold">Equipe</a>
+                    <a href="replays.html"
+                        class="px-2 py-6 font-medium text-white transition-colors duration-200 transform rounded md:py-2 text-md dark:text-gray-200 hover:bg-black hover:text-gray-300 md:mx-2 hover:font-bold">Replays</a>
+                    <a href="sobre.html"
+                        class="px-2 py-6 font-medium text-white transition-colors duration-200 transform rounded md:py-2 text-md dark:text-gray-200 hover:bg-black hover:text-gray-300 md:mx-2 hover:font-bold">Sobre</a>
+                </div>
+            </div>
+
+            <!-- REDES SOCIAIS -->
+            <div class="flex justify-center hidden mt-6 lg:flex lg:mt-0 lg:-mx-2" id="mobile2">
+
+                <!-- DISCORD -->
+                <a target="_blank" rel="noopener noreferrer" href="https://bit.ly/DISCORDCAMP"><img
+                        class="w-10 h-10 mt-1 mr-6 text-white transition-transform duration-500 ease-out transform hover:scale-125"
+                        src="../src/assets/imgs/Discord-Logo-white.svg"></img></a>
+
+                <!-- INSTAGRAM -->
+                <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/etpcesports_/ "><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-12 h-12 mr-8 text-white transition-transform duration-500 ease-out transform hover:scale-125"
+                        x="0px" y="0px" width="24" height="24" viewBox="0 0 24 24" style="fill: white;">
+                        <path
+                            d="M 8 3 C 5.243 3 3 5.243 3 8 L 3 16 C 3 18.757 5.243 21 8 21 L 16 21 C 18.757 21 21 18.757 21 16 L 21 8 C 21 5.243 18.757 3 16 3 L 8 3 z M 8 5 L 16 5 C 17.654 5 19 6.346 19 8 L 19 16 C 19 17.654 17.654 19 16 19 L 8 19 C 6.346 19 5 17.654 5 16 L 5 8 C 5 6.346 6.346 5 8 5 z M 17 6 A 1 1 0 0 0 16 7 A 1 1 0 0 0 17 8 A 1 1 0 0 0 18 7 A 1 1 0 0 0 17 6 z M 12 7 C 9.243 7 7 9.243 7 12 C 7 14.757 9.243 17 12 17 C 14.757 17 17 14.757 17 12 C 17 9.243 14.757 7 12 7 z M 12 9 C 13.654 9 15 10.346 15 12 C 15 13.654 13.654 15 12 15 C 10.346 15 9 13.654 9 12 C 9 10.346 10.346 9 12 9 z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </nav>
+	<header class="z-30 hero">
+		<div class="hero-wrap">
+			<p class="intro" id="intro">ETPC</p>
+			<h1 id="headline">ESPORTS</h1>
+			<p class="year"><i class="fa fa-star"></i> Segunda edição <i class="fa fa-star"></i></p>
+			<p>Chaveamento</p>
+		</div>
+	</header>
+  <div class="flex mt-16 mr-3">
+    <ol class="flex flex-col justify-around flex-1 mr-5 round">
+      <li class="relative flex items-center p-1 m-2 leading-relaxed text-gray-300 bg-gray-600 rounded-full ">
+        <span class="inline-block w-6 h-6 ml-1 mr-1 bg-gray-300 rounded-full"></span>
+        Competitor 16
+      </li>
+      <li class="relative flex items-center p-1 m-2 leading-relaxed text-gray-300 bg-gray-600 rounded-full">
+        <span class="inline-block w-6 h-6 ml-1 mr-1 bg-gray-300 rounded-full"></span>
+        Competitor 17 
+      </li>
+      <li class="relative flex items-center p-1 m-2 leading-relaxed text-gray-300 bg-gray-600 rounded-full ">
+        <span class="inline-block w-6 h-6 ml-1 mr-1 bg-gray-300 rounded-full"></span>
+        Competitor 15
+      </li>
+      
+      <li class="relative flex items-center p-1 m-2 leading-relaxed text-gray-300 bg-gray-600 rounded-full ">
+        <span class="inline-block w-6 h-6 ml-1 mr-1 bg-gray-300 rounded-full"></span>
+        Competitor 18
+      </li>
+      <li class="relative flex items-center p-1 m-2 leading-relaxed text-gray-300 bg-gray-600 rounded-full ">
+        <span class="inline-block w-6 h-6 ml-1 mr-1 bg-gray-300 rounded-full"></span>
+        Competitor 14 
+      </li>
+      <li class="relative flex items-center p-1 m-2 leading-relaxed text-gray-300 bg-gray-600 rounded-full">
+        <span class="inline-block w-6 h-6 ml-1 mr-1 bg-gray-300 rounded-full"></span>
+        Competitor 19
+      </li>
+    </ol>
+    <ol class="flex flex-col justify-around flex-1 mr-5 round">
+      <li class="relative flex items-center p-1 m-2 leading-relaxed text-gray-300 bg-gray-600 rounded-full with-connector">
+        <span class="inline-block w-6 h-6 ml-1 mr-1 bg-gray-300 rounded-full"></span>
+        Competitor
+      </li>
+      <li class="relative flex items-center p-1 m-2 leading-relaxed text-gray-300 bg-gray-600 rounded-full with-connector">
+        <span class="inline-block w-6 h-6 ml-1 mr-1 bg-gray-300 rounded-full"></span>
+        Competitor
+      </li>
+      <li class="relative flex items-center p-1 m-2 leading-relaxed text-gray-300 bg-gray-600 rounded-full with-connector with-bye">
+        <span class="inline-block w-6 h-6 ml-1 mr-1 bg-gray-300 rounded-full"></span>
+        Competitor
+      </li>
+      <li class="relative flex items-center p-1 m-2 leading-relaxed text-gray-300 bg-gray-600 rounded-full with-connector">
+        <span class="inline-block w-6 h-6 ml-1 mr-1 bg-gray-300 rounded-full"></span>
+        Competitor
+      </li>
+      <li class="relative flex items-center p-1 m-2 leading-relaxed text-gray-300 bg-gray-600 rounded-full with-connector">
+        <span class="inline-block w-6 h-6 ml-1 mr-1 bg-gray-300 rounded-full"></span>
+        Competitor
+      </li>
+      <li class="relative flex items-center p-1 m-2 leading-relaxed text-gray-300 bg-gray-600 rounded-full with-connector">
+        <span class="inline-block w-6 h-6 ml-1 mr-1 bg-gray-300 rounded-full"></span>
+        Competitor
+      </li>
+      <li class="relative flex items-center p-1 m-2 leading-relaxed text-gray-300 bg-gray-600 rounded-full with-connector">
+        <span class="inline-block w-6 h-6 ml-1 mr-1 bg-gray-300 rounded-full"></span>
+        Competitor
+      </li>
+      <li class="relative flex items-center p-1 m-2 leading-relaxed text-gray-300 bg-gray-600 rounded-full with-connector">
+        <span class="inline-block w-6 h-6 ml-1 mr-1 bg-gray-300 rounded-full"></span>
+        Competitor
+      </li>
+      <li class="relative flex items-center p-1 m-2 leading-relaxed text-gray-300 bg-gray-600 rounded-full with-connector">
+        <span class="inline-block w-6 h-6 ml-1 mr-1 bg-gray-300 rounded-full"></span>
+        Competitor
+      </li>
+      <li class="relative flex items-center p-1 m-2 leading-relaxed text-gray-300 bg-gray-600 rounded-full with-connector">
+        <span class="inline-block w-6 h-6 ml-1 mr-1 bg-gray-300 rounded-full"></span>
+        Competitor
+      </li>
+      <li class="relative flex items-center p-1 m-2 leading-relaxed text-gray-300 bg-gray-600 rounded-full with-connector">
+        <span class="inline-block w-6 h-6 ml-1 mr-1 bg-gray-300 rounded-full"></span>
+        Competitor
+      </li>
+      <li class="relative flex items-center p-1 m-2 leading-relaxed text-gray-300 bg-gray-600 rounded-full with-connector">
+        <span class="inline-block w-6 h-6 ml-1 mr-1 bg-gray-300 rounded-full"></span>
+        Competitor
+      </li>
+      <li class="relative flex items-center p-1 m-2 leading-relaxed text-gray-300 bg-gray-600 rounded-full with-connector">
+        <span class="inline-block w-6 h-6 ml-1 mr-1 bg-gray-300 rounded-full"></span>
+        Competitor
+      </li>
+      <li class="relative flex items-center p-1 m-2 leading-relaxed text-gray-300 bg-gray-600 rounded-full with-connector">
+        <span class="inline-block w-6 h-6 ml-1 mr-1 bg-gray-300 rounded-full"></span>
+        Competitor
+      </li>
+      <li class="relative flex items-center p-1 m-2 leading-relaxed text-gray-300 bg-gray-600 rounded-full with-connector">
+        <span class="inline-block w-6 h-6 ml-1 mr-1 bg-gray-300 rounded-full"></span>
+        Competitor
+      </li>
+      <li class="relative flex items-center p-1 m-2 leading-relaxed text-gray-300 bg-gray-600 rounded-full with-connector">
+        <span class="inline-block w-6 h-6 ml-1 mr-1 bg-gray-300 rounded-full"></span>
+        Competitor
+      </li>
+    </ol>
+    <ol class="flex flex-col justify-around flex-1 ml-5 mr-5 round">
+      <li id="round-2" class="relative flex items-center p-1 m-2 leading-relaxed text-gray-300 bg-gray-600 rounded-full with-connector">
+        <span class="inline-block w-6 h-6 ml-1 mr-1 bg-gray-300 rounded-full"></span>
+        Competitor
+      </li>
+      <li class="relative flex items-center p-1 m-2 leading-relaxed text-gray-300 bg-gray-600 rounded-full from-bye with-connector">
+        <span class="inline-block w-6 h-6 ml-1 mr-1 bg-gray-300 rounded-full"></span>
+        Competitor
+      </li>
+      <li class="relative flex items-center p-1 m-2 leading-relaxed text-gray-300 bg-gray-600 rounded-full with-connector">
+        <span class="inline-block w-6 h-6 ml-1 mr-1 bg-gray-300 rounded-full"></span>
+        Competitor
+      </li>
+      <li class="relative flex items-center p-1 m-2 leading-relaxed text-gray-300 bg-gray-600 rounded-full with-connector">
+        <span class="inline-block w-6 h-6 ml-1 mr-1 bg-gray-300 rounded-full"></span>
+        Competitor
+      </li>
+          <li class="relative flex items-center p-1 m-2 leading-relaxed text-gray-300 bg-gray-600 rounded-full with-connector">
+        <span class="inline-block w-6 h-6 ml-1 mr-1 bg-gray-300 rounded-full"></span>
+        Competitor
+      </li>
+      <li class="relative flex items-center p-1 m-2 leading-relaxed text-gray-300 bg-gray-600 rounded-full with-connector">
+        <span class="inline-block w-6 h-6 ml-1 mr-1 bg-gray-300 rounded-full"></span>
+        Competitor
+      </li>
+      <li class="relative flex items-center p-1 m-2 leading-relaxed text-gray-300 bg-gray-600 rounded-full with-connector">
+        <span class="inline-block w-6 h-6 ml-1 mr-1 bg-gray-300 rounded-full"></span>
+        Competitor
+      </li>
+      <li class="relative flex items-center p-1 m-2 leading-relaxed text-gray-300 bg-gray-600 rounded-full with-connector">
+        <span class="inline-block w-6 h-6 ml-1 mr-1 bg-gray-300 rounded-full"></span>
+        Competitor
+      </li>
+    </ol>
+    <ol class="flex flex-col justify-around flex-1 ml-5 mr-5 round">
+      <li id="round-3" class="relative flex items-center p-1 m-2 leading-relaxed text-gray-300 bg-gray-600 rounded-full with-connector">
+        <span class="inline-block w-6 h-6 ml-1 mr-1 bg-gray-300 rounded-full"></span>
+        Competitor
+      </li>
+      <li class="relative flex items-center p-1 m-2 leading-relaxed text-gray-300 bg-gray-600 rounded-full with-connector">
+        <span class="inline-block w-6 h-6 ml-1 mr-1 bg-gray-300 rounded-full"></span>
+        Competitor
+      </li>
+      <li class="relative flex items-center p-1 m-2 leading-relaxed text-gray-300 bg-gray-600 rounded-full with-connector">
+        <span class="inline-block w-6 h-6 ml-1 mr-1 bg-gray-300 rounded-full"></span>
+        Competitor
+      </li>
+      <li class="relative flex items-center p-1 m-2 leading-relaxed text-gray-300 bg-gray-600 rounded-full with-connector">
+        <span class="inline-block w-6 h-6 ml-1 mr-1 bg-gray-300 rounded-full"></span>
+        Competitor
+      </li>
+    </ol>
+    <ol class="flex flex-col justify-around flex-1 ml-5 mr-5 round">
+      <li id="round-4" class="relative flex items-center p-1 m-2 leading-relaxed text-gray-300 bg-gray-600 rounded-full with-connector">
+        <span class="inline-block w-6 h-6 ml-1 mr-1 bg-gray-300 rounded-full"></span>
+        Competitor
+      </li>
+      <li class="relative flex items-center p-1 m-2 leading-relaxed text-gray-300 bg-gray-600 rounded-full with-connector">
+        <span class="inline-block w-6 h-6 ml-1 mr-1 bg-gray-300 rounded-full"></span>
+        Competitor
+      </li>
+    </ol>
+    <ol class="flex flex-col justify-around flex-1 ml-5 mr-5 round round-winner">
+      <li id="round-5" class="relative flex items-center p-1 m-2 leading-relaxed text-gray-300 bg-gray-600 rounded-full with-connector">
+        <span class="inline-block w-6 h-6 ml-1 mr-1 bg-gray-300 rounded-full"></span>
+        Competitor
+      </li>
+    </ol>
+  </div>
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+	
+</html>
