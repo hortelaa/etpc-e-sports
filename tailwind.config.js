@@ -1,5 +1,4 @@
-const plugin = require('tailwindcss/plugin');
-
+const plugin = require("tailwindcss/plugin");
 
 module.exports = {
   mode: "jit",
@@ -29,35 +28,32 @@ module.exports = {
 
 module.exports = {
   purge: {
-    content: ['./public/**/*.html'],
+    content: ["./public/**/*.html"],
   },
-  darkMode: 'class', // or 'media' or 'class'
+  darkMode: "class", // or 'media' or 'class'
   theme: {
     extend: {
-      fontFamily:{
-        'denis': ['Bai Jamjuree', 'sans-serif']
+      fontFamily: {
+        denis: ["Bai Jamjuree", "sans-serif"],
       },
-      colors:{
-        'camp-claro':'#510cc7',
-        'camp-escuro':'#8c2cda',
-        'etpc-azuldark': "#242443",
-        'etpc-azulight':"#00b6ca",
-        'etpc-amarelo':"#edb700",
-        'etpc-salmao':"#b15165", 
-        'etpc-branco':"#f0f0e8",
-        
+      colors: {
+        "camp-claro": "#510cc7",
+        "camp-escuro": "#8c2cda",
+        "etpc-azuldark": "#242443",
+        "etpc-azulight": "#00b6ca",
+        "etpc-amarelo": "#edb700",
+        "etpc-salmao": "#b15165",
+        "etpc-branco": "#f0f0e8",
       },
       backgroundImage: {
-        'fundo': "url('/src/imgs/fundocadastro.png')",
-        'fundo2': "url('jhin-camile.gif')",
-        'fundoindex': "url('/src/assets/imgs/fundoindex.jpg')",
-        'fundoindexblack': "url('/src/assets/imgs/fundoindexblack-min.webp')",
-        ,
-       }
+        fundo: "url('/src/imgs/fundocadastro.png')",
+        fundo2: "url('jhin-camile.gif')",
+        fundoindex: "url('/src/assets/imgs/fundoindex.jpg')",
+        fundoindexblack: "url('/src/assets/imgs/fundoindexblack-min.webp')",
+      },
     },
   },
   variants: {
     extend: {},
   },
-}
-
+};
