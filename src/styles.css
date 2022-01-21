@@ -5,24 +5,26 @@
 /*/Estilização do "ETPC" /*/
 
 .etpc {
-    @apply text-4xl font-bold text-etpc-amarelo font-denis;
+  @apply text-4xl font-bold text-etpc-amarelo font-denis;
 }
 
 /*/Estilização do "Botão acessar site" /*/
 
 .animbtnsite {
-    @apply transition duration-500 ease-out transform bg-etpc-azulight hover:scale-125;
+  @apply transition duration-500 ease-out transform bg-etpc-azulight hover:scale-125;
 }
 /*/Estilização do "Botão Cadastro" /*/
 
 .animbtncadastro {
-    @apply transition duration-500 ease-out transform bg-etpc-azulight hover:scale-125;
+  @apply transition duration-500 ease-out transform bg-etpc-azulight hover:scale-125;
 }
 
-.animbtncontinuar{
-    @apply transition duration-500 ease-out transform bg-purple-800 hover:scale-110 ;
+/*/Estilização do "Botão Continuar" /*/
+
+.animbtncontinuar {
+  @apply transition duration-500 ease-out transform bg-purple-800 hover:scale-110;
 }
 
-#toggle:checked ~ label div.toggle-dot{
-    @apply translate-x-2;
+#toggle:checked ~ label div.toggle-dot {
+  @apply translate-x-2;
 }
